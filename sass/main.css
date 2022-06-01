@@ -15,7 +15,7 @@ ul {
 }
 
 html, body {
-  font-size: 10px;
+  font-size: 0.9765625vw;
 }
 
 .section {
@@ -38,7 +38,7 @@ html, body {
 
 .button-fix {
   position: fixed;
-  z-index: 100;
+  z-index: 1000;
   left: 4rem;
   bottom: 8rem;
   display: -webkit-box;
@@ -109,10 +109,14 @@ html, body {
   line-height: 3.1rem;
 }
 
+.title--black {
+  color: #6D6D6D;
+}
+
 .top {
   position: absolute;
+  top: 9rem;
   right: 1rem;
-  top: 3.5rem;
   font-family: 'Exo 2';
   font-style: italic;
   font-weight: 500;
@@ -152,7 +156,7 @@ html, body {
 }
 
 .section-block {
-  min-height: 53.9rem;
+  padding-bottom: 2rem !important;
 }
 
 .open-menu {
@@ -161,7 +165,7 @@ html, body {
 
 @media screen and (max-width: 1024px) {
   html, body {
-    font-size: 0.9765625vw;
+    font-size: 1.497005988023592vw;
   }
   ._container {
     padding: 0 4rem;
@@ -169,14 +173,7 @@ html, body {
   .top {
     display: none;
   }
-  .section-block {
-    min-height: 96rem;
-  }
   .title {
-    font-family: 'Exo 2';
-    font-style: normal;
-    font-weight: 800;
-    color: #FFFFFF;
     font-size: 2.4rem;
     line-height: 2.6rem;
   }
@@ -195,7 +192,7 @@ html, body {
 
 @media screen and (max-width: 668px) {
   html, body {
-    font-size: 1.497005988023592vw;
+    font-size: 10px;
   }
   ._container {
     padding: 0 3.1rem;
@@ -217,12 +214,7 @@ html, body {
     line-height: 6.0rem;
     text-transform: uppercase;
     text-align: center;
-    position: absolute !important;
-    left: 50%;
-    bottom: 0rem !important;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
-    display: none !important;
+    margin-bottom: -3rem;
   }
 }
 
@@ -391,7 +383,7 @@ html, body {
 
 .presentation__container {
   min-height: 100%;
-  padding-top: 10.9rem;
+  padding-top: 15.6rem;
 }
 
 .presentation__content {
@@ -552,6 +544,112 @@ html, body {
   }
 }
 
+.cible {
+  width: 100%;
+}
+
+.cible__container {
+  padding-top: 7.8rem;
+  padding-bottom: 6.3rem;
+}
+
+.cible__title {
+  margin-bottom: 3.7rem;
+  text-align: center;
+}
+
+.cible__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8rem;
+  max-width: 85rem;
+  margin: auto;
+}
+
+.item-cible {
+  width: 23rem;
+  min-height: 33.5rem;
+  border-radius: 2.6rem;
+  position: relative;
+  padding-top: 2.3rem;
+}
+
+.item-cible:nth-child(1) {
+  background: linear-gradient(257.56deg, #CD96EE 22.53%, #C9B0F2 69.82%);
+}
+
+.item-cible:nth-child(2) {
+  background: linear-gradient(256.95deg, #F6A0AF 8.56%, #FFBFD2 89.87%), linear-gradient(257.56deg, #CD96EE 22.53%, #C9B0F2 69.82%), #FFFFFF;
+}
+
+.item-cible:nth-child(3) {
+  background: linear-gradient(257.56deg, #53CBF9 22.53%, #63D4FF 69.82%), linear-gradient(256.95deg, #F6A0AF 8.56%, #FFBFD2 89.87%), linear-gradient(257.56deg, #CD96EE 22.53%, #C9B0F2 69.82%);
+}
+
+.item-cible__title {
+  font-family: 'Exo 2';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2.2rem;
+  line-height: 2.6rem;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.item-cible__img {
+  max-width: 16.355rem;
+  height: 19.701rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  position: absolute;
+  right: 0;
+  bottom: 1.4rem;
+}
+
+.item-cible__img img {
+  max-width: 100%;
+  height: 100%;
+}
+
+.item-cible__text {
+  font-family: 'Exo 2';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.3rem;
+  line-height: 1.5rem;
+  color: #FFFFFF;
+  padding: 1.7rem 1.6rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .cible__container-row {
+    overflow-x: auto;
+    scrollbar-width: none;
+    margin: 0 -3rem 0;
+  }
+  .cible__container-row::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    background-color: transparent;
+  }
+  .cible__row {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    width: auto;
+    max-width: none;
+    padding: 0 3rem 0;
+  }
+}
+
 .expert {
   width: 100%;
   background: #000;
@@ -580,7 +678,7 @@ html, body {
 }
 
 .expert__text {
-  font-family: 'Exo 2.0';
+  font-family: 'Exo 2';
   font-style: normal;
   font-weight: 500;
   font-size: 1.6rem;
@@ -809,9 +907,7 @@ html, body {
 }
 
 .road__top {
-  padding-top: 1rem;
   max-width: 31.9rem;
-  top: 11rem;
 }
 
 .road__row {
@@ -846,6 +942,8 @@ html, body {
 .road__img img {
   max-width: 100%;
   height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .road__container-big-word {
@@ -1030,6 +1128,108 @@ html, body {
   .cooperation__img {
     width: 26.4rem;
     height: 19.8rem;
+  }
+}
+
+.case {
+  width: 100%;
+  background: linear-gradient(257.56deg, rgba(90, 210, 218, 0.87) 22.53%, rgba(116, 232, 232, 0.87) 69.82%), linear-gradient(251.72deg, #F8DD97 15.55%, #F3CA7A 78.16%);
+}
+
+.case__container {
+  padding-top: 21.8rem;
+  background: url(../img/phone.png);
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.case__content {
+  position: relative;
+  max-width: 74rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+}
+
+.case__body {
+  max-width: 52.8rem;
+}
+
+.case__text {
+  font-family: 'Exo 2';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 1.8rem;
+  line-height: 2.6rem;
+  text-align: center;
+  color: #FFFFFF;
+  margin-bottom: 0.4rem;
+}
+
+.case__text span {
+  color: #1FA39D;
+}
+
+.case__img {
+  max-width: 74rem;
+  height: 38rem;
+  display: none;
+}
+
+.case__img img {
+  max-width: 100%;
+  height: 100%;
+}
+
+.case__container-big-word {
+  max-width: 44.8rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .case__container {
+    padding-top: 21.8rem;
+    background: unset;
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+  .case__img {
+    display: block;
+    width: 100%;
+    height: 34.4rem;
+  }
+  .case__content {
+    display: block;
+  }
+  .case__body {
+    max-width: 52.8rem;
+    margin: 0 auto 8.2rem;
+  }
+}
+
+@media screen and (max-width: 668px) {
+  .case__container {
+    padding-top: 21.8rem;
+    background: unset;
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+  .case__img {
+    display: block;
+    width: 100%;
+    height: 34.4rem;
+    margin-bottom: 8.8rem;
+  }
+  .case__content {
+    display: block;
+  }
+  .case__body {
+    max-width: 52.8rem;
+    margin: 0 auto 4.8rem;
+  }
+  .case__text {
+    font-size: 1.4rem;
+    line-height: 2.0rem;
   }
 }
 /*# sourceMappingURL=main.css.map */

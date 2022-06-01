@@ -8,10 +8,12 @@
     <link href="https://fonts.googleapis.com/css?family=Exo+2:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic"
      rel="stylesheet" />
      <link href="https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900" rel="stylesheet" />
+     <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.css">
     <title>upfly</title>
 </head>
 <body>
     <div class="wrapper">
+
         <!-- header -->
         <header class="header">
             <div class="header__container _container">
@@ -70,8 +72,9 @@
             </div>
         </header>
         <div class="wrapper-section" id="sections">
+            <div class="background"></div>
             <!-- presentation -->
-            <section class="presentation section-block section_1">
+            <section class="presentation section section-block "  id="section_1" data-text="marketing" data-params="#83CAF2;#82D6F0;-300px;-300px;-120px">
                 <div class="presentation__container _container">
                     <div class="presentation__content">
                         <div class="presentation__row">
@@ -108,18 +111,42 @@
                 </div>
                 
             </section>
-            <section class="cible section-block section_2">
+             <!-- cible -->
+            <section class="cible section section-block "  id="section_2" data-text="experience" data-params="#fff;#fff;-300px;-300px;-120px">
                 <div class="cible__container _container">
                     <h2 class="cible__title title title--black">Для кого наша экспертиза</h2>
+                  <div class="cible__container-row">
                     <div class="cible__row">
                         <div class="cible__item item-cible">
-                            
+                            <h3 class="item-cible__title">Для <br>    стоматологии</h3>
+                            <div class="item-cible__img">
+                                <img src="./img/стоматология 1.png" alt=" tooth picture illustration">
+                            </div>
+                        </div>
+                        <div class="cible-cible__item item-cible">
+                            <p class="item-cible__text">
+                                Проанализируем спрос на ту или иную косметологическую услугу и активность конкурентов по каждой из них.
+                            </p>
+                            <p class="item-cible__text">
+                                Статус официального партнера Яндекса позволяет нам получить много полезной информации недоступной для обычных агентств.
+                            </p>
+                            <p class="item-cible__text">
+                                Мы знаем как создать наиболее привлекательное предложение для вашего потенциального клиента по таким направлениям как эстетическая,
+                                 врачебная косметология и другим наиболее приоритетным для вашей клиники.
+                            </p>
+                        </div>
+                        <div class="cible__item item-cible">
+                            <h3 class="item-cible__title">Для многопрофильных клиник</h3>
+                            <div class="item-cible__img">
+                                <img src="./img/стоматология 2.png" alt=" medical staf picture illustration">
+                            </div>
                         </div>
                     </div>
+                  </div>
                 </div>
             </section>
             <!-- expert -->
-            <section class=" expert section-block section_3">
+            <section class=" expert section section-block "  id="section_3"  data-text="experts" data-params="#FFA16E;#FFBD80;-300px;-300px;-120px">
                 <div class="expert__container _container">
                     <div class="expert__row">
                         <div class="expert__body">
@@ -148,7 +175,7 @@
                 </div>
             </section>
             <!-- together foever -->
-            <section class="forever section-block section_4">
+            <section class="forever section section-block "  id="section_4"  data-text="experts" data-params="#CD96EE;#C9B0F2;-300px;-300px;-120px">
                 <div class="forever__container _container">
                     <div class="forever__top top">
                         Медицина – это индустрия, в которой нет желаний. Люди мечтают купить новый телефон,
@@ -180,7 +207,7 @@
                 </div>
             </section>
             <!-- Road with clear markings -->
-            <section class="road section-block section_5">
+            <section class="road section section-block " id="section_5"  data-text="experts" data-params="#F8DD97;#F3CA7A;-300px;-300px;-120px">
                 <div class="road__container _container">
                     <div class="road__top top">
                         Основная цель правильной клиники – вызвать доверие у пациента.
@@ -207,7 +234,7 @@
                 </div>
             </section>
             <!-- cooperation -->
-            <section class="cooperation section-block section_6">
+            <section class="cooperation section section-block "  id="section_6"  data-text="working" data-params="#F0B3A5;#F5A693;-300px;-300px;-120px">
                 <div class="cooperation__container _container">
                     <div class="cooperation__row">
                         <div class="cooperation__img">
@@ -242,9 +269,37 @@
                     </div>
                 </div>
             </section>
+             <!-- cases -->
+            <section class="case section section-block " id="section_7"  data-text="cases" data-params="#F8DD97;#F3CA7A;-300px;-300px;-120px">
+                <div class="case__container _container">
+                    <div class="case__content">
+                        <div class="case__body">
+                            <p class="case__text">
+                                О том как и каких результатов мы добиваемся для своих клиентов,
+                                 и что мы мы можем сделать именно для вашего бизнеса, вы  можете узнать позвонив по телефону
+                                 <span>+7 831 423 95 33</span> 
+                            </p>
+                         
+                        </div>
+
+                        <div class="case__img">
+                            <img src="./img/phone.png" alt="phone picture illustration">
+                        </div>
+                    </div>
+                    <div class="case__containner-big-word big-word"> 
+                        <div class="case__big-word">
+                            cases
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
        
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src=" https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/vendors/scrolloverflow.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.js"></script>
     <script src="./js/js.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 </html>

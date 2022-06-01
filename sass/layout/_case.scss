@@ -1,0 +1,105 @@
+.case{
+    width: 100%;
+    background: linear-gradient(257.56deg, rgba(90, 210, 218, 0.87) 22.53%, rgba(116, 232, 232, 0.87) 69.82%),
+     linear-gradient(251.72deg, #F8DD97 15.55%, #F3CA7A 78.16%);
+    &__container{
+        padding-top: 21.8rem;
+        background: url(../img/phone.png) ;
+        background-repeat: no-repeat;
+        background-position:  right ;
+    }
+    &__content{
+        position: relative;
+        max-width: 74rem;
+        display: flex;
+        margin: auto;
+   
+     
+        
+    }
+    &__body{
+        max-width: 52.8rem;
+    }
+    &__text{
+        font-family: 'Exo 2';
+        font-style: normal;
+        font-weight: 800;
+        font-size: 1.8rem;
+        line-height: 2.6rem;
+        text-align: center;
+        color: #FFFFFF;
+        margin-bottom: 0.4rem;
+        span{
+            color: #1FA39D;
+        }
+    }
+
+    &__img{
+       
+        max-width: 74rem;
+        height: 38rem;
+       display: none;
+        img{
+            max-width: 100%;
+            height: 100%;
+        }
+    }
+    &__container-big-word{
+        max-width: 44.8rem;
+        // margin: auto;
+    }
+
+    @media screen and (max-width:1024px) {
+        &__container{
+            padding-top: 21.8rem;
+            background:unset;
+            background-repeat: no-repeat;
+            background-position:  right ;
+        }
+        &__img{
+            display: block;
+            width: 100%;
+            height: 34.4rem;
+        }
+        &__content{
+            display: block;
+         
+        }
+       
+        &__body{
+            max-width: 52.8rem;
+        
+          
+            margin: 0 auto 8.2rem;
+        }
+    }
+    @media screen and (max-width:668px) {
+        &__container{
+            padding-top: 21.8rem;
+            background:unset;
+            background-repeat: no-repeat;
+            background-position:  right ;
+        }
+        &__img{
+            display: block;
+            width: 100%;
+            height: 34.4rem;
+            margin-bottom: 8.8rem;
+        }
+        &__content{
+            display: block;
+         
+        }
+       
+        &__body{
+            max-width: 52.8rem;
+           
+          
+            margin: 0 auto 4.8rem;
+        }
+        &__text{
+            font-size: 1.4rem;
+            line-height: 2.0rem;
+        }
+    }
+}
