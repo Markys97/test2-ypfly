@@ -953,10 +953,14 @@ html, body {
   margin-bottom: 1rem;
   font-family: 'Exo 2';
   font-style: normal;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 1.6rem;
   line-height: 1.9rem;
   color: #FFFFFF;
+}
+
+.cooperation__item span {
+  font-weight: 800;
 }
 
 .cooperation__list {
