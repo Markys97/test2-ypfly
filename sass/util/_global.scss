@@ -1,0 +1,233 @@
+html,body{
+    font-size: 10px;
+}
+.section{
+    position: relative;
+}
+.wrapper{
+    overflow: hidden;
+    position: relative;
+}
+.wrapper-section{
+    position: relative;
+    z-index: 10;
+}
+._container{
+    padding: 0 4rem;
+    // border:1px solid red;
+}
+.button-fix{
+    position: fixed;
+    z-index: 100;
+    left: 4rem;
+    bottom: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 14.4rem;
+    height: 2.6rem;
+    background: #FFFFFF;
+    border-radius: 0.5rem;
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    color: #8ADDEB;
+    &__img{
+        display: none;
+    }
+}
+
+.tel{
+    &__link{
+        font-family: 'Exo 2';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+        
+        color: #FFFFFF;
+    }
+}
+
+.burger{
+    width: 33px;
+    height: 18.21px;
+    cursor: pointer;
+    &__row{
+        display: block;
+        width: 100%;
+        height: 4.55px;
+        background: #FFFFFF;
+        border-radius: 4px;
+        margin-bottom: 2.28px;
+        &--small{
+            width: 21.83px;
+        }
+    }
+}
+
+.title{
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 800;
+    color: #FFFFFF;
+    font-size: 2.4rem;
+    line-height: 2.6rem;
+    text-transform: uppercase;
+    &--big{
+        font-size: 2.6rem;
+        line-height: 3.1rem;
+    }
+}
+.top{
+    position: absolute;
+    
+
+    right: 1rem;
+    top: 3.5rem ;
+ 
+   font-family: 'Exo 2';
+   font-style: italic;
+   font-weight: 500;
+   font-size: 1.2rem;
+   line-height: 1.4rem;
+   color: #FFFFFF;
+   z-index: 100;
+   margin-bottom: 5.8rem;
+   &::after{
+       content: '“';
+       display: block;
+       position: absolute;
+       left: -3rem;
+       top: -4rem;
+       font-family: 'Exo 2';
+       font-style: italic;
+       font-weight: 700;
+       font-size: 10rem;
+       line-height: 12rem;
+       text-transform: uppercase;
+       color: #FFFFFF;
+       opacity: 0.25;
+       z-index: 10;
+   }
+}
+
+.big-word{
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 14.4018rem;
+    line-height: 17.3rem;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    opacity: 0.1;
+}
+
+.section-block{
+    min-height: 53.9rem;
+}
+.open-menu{
+    left: 0!important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:1024px) {
+    html,body{
+        font-size: 0.9765625vw;
+    }
+    ._container{
+        padding: 0 4rem;
+        
+    }
+    .top{
+        display: none;
+    }
+    .section-block{
+        min-height: 96rem;
+    }
+    .title{
+        font-family: 'Exo 2';
+        font-style: normal;
+        font-weight: 800;
+        color: #FFFFFF;
+        font-size: 2.4rem;
+        line-height: 2.6rem;
+        &--big{
+            font-weight: 900;
+            font-size: 2.4rem;
+            line-height: 3.1rem;
+        }
+    }
+    .big-word{
+      
+        font-size: 7rem;
+        line-height: 8.4rem;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    
+    
+}
+
+
+
+@media screen and (max-width:668px) {
+    html,body{
+        font-size: 1.497005988023592vw;
+    }
+    ._container{
+        padding: 0 3.1rem;
+    }
+    .button-fix{
+      
+        width: auto;
+        height: auto;
+        background: unset;
+        border-radius: unset;
+               
+        &__img{
+            display: block;
+        }
+        &__text{
+            display: none;
+        }
+    }
+    .big-word{
+      
+        font-size: 5.0rem;
+        line-height: 6.0rem;
+        text-transform: uppercase;
+        text-align: center;
+        position: absolute!important;
+        left: 50%;
+        bottom: 0rem!important;
+        transform: translateX(-50%);
+        display: none!important;
+    }
+   
+}
+
+
+
+@media screen and (max-width:320px) {
+    html,body{
+        font-size: 10px;
+    }
+    ._container{
+        padding: 0 2rem;
+    }
+}

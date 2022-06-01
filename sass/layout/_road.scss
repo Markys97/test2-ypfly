@@ -1,0 +1,109 @@
+.road{
+    width: 100%;
+    background: linear-gradient(251.72deg, #F8DD97 15.55%, #F3CA7A 78.16%),
+     linear-gradient(256.17deg, #4BD6C5 33.11%, #79DFCD 91.12%),
+      linear-gradient(257.56deg, #CD96EE 22.53%, #C9B0F2 69.82%);
+    &__container{
+        padding-top: 19rem;
+        position: relative;
+    }
+    &__top{
+        padding-top: 1rem;
+        max-width: 31.9rem;
+        top: 11rem;
+    }
+    &__row{
+        display: flex;
+        gap: 5.8rem;
+        // justify-content: center;
+    }
+    &__body{
+        max-width: 48.2rem;
+    }
+    &__title{
+        margin-bottom: 3.2rem;
+    }
+    &__text{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+
+        color: #FFFFFF;
+    }
+    &__img{
+        width: 46.5rem;
+        height: 33.8rem;
+        img{
+            max-width: 100%;
+            height: 100%;
+        }
+    }
+    &__container-big-word{
+        max-width: 63.7rem;
+
+    }
+    &__big-word{
+        position: relative;
+        margin-top: -19rem;
+    }
+
+
+    @media screen and (max-width:1024px) {
+        &__row{
+            display: block;
+        }
+        &__body{
+            max-width: 62.1rem;
+        }
+        &__title{
+            text-align: right;
+        }
+        &__text{
+            margin-bottom: 9.6rem;
+        }
+        &__img{
+            margin: 0 auto 5.6rem;
+        }
+        &__big-word{
+            margin-top: 0;
+            text-align: center;
+        }
+        &__container-big-word{
+           max-width: 100%;
+
+        }
+
+    }
+    @media screen and (max-width:668px) {
+        
+        &__body{
+            max-width: 100%;
+        }
+        &__title{
+            text-align: center;
+        }
+        &__text{
+            margin-bottom: 4.8rem;
+            font-family: 'Exo 2';
+            font-weight: 500;
+            font-size: 1.4rem;
+            line-height: 1.8rem;
+        }
+        &__img{
+            margin: 0 auto 5.6rem;
+            width: 28.0rem;
+            height: 20.3rem;
+        }
+        &__big-word{
+            margin-top: 0;
+            text-align: center;
+        }
+        &__container-big-word{
+           max-width: 100%;
+
+        }
+
+    }
+}
