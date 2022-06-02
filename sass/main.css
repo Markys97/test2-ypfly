@@ -586,6 +586,9 @@ html, body {
 }
 
 @media screen and (max-width: 668px) {
+  .presentation__container {
+    padding-top: 8rem;
+  }
   .presentation__row {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
@@ -781,6 +784,12 @@ html, body {
     margin: auto;
     line-height: 2.9rem;
   }
+  .cible__container {
+    padding-top: 5.4rem;
+  }
+  .cible__title {
+    margin-bottom: 3.7rem;
+  }
 }
 
 .expert {
@@ -895,6 +904,9 @@ html, body {
 }
 
 @media screen and (max-width: 668px) {
+  .expert__container {
+    padding-top: 5.3rem;
+  }
   .expert__row {
     display: block;
   }
@@ -1015,6 +1027,9 @@ html, body {
 }
 
 @media screen and (max-width: 668px) {
+  .forever__container {
+    padding-top: 5.3rem;
+  }
   .forever__title {
     text-align: center;
   }
@@ -1123,6 +1138,9 @@ html, body {
 }
 
 @media screen and (max-width: 668px) {
+  .road__container {
+    padding-top: 5.3rem;
+  }
   .road__body {
     max-width: 100%;
   }
@@ -1249,6 +1267,9 @@ html, body {
 }
 
 @media screen and (max-width: 668px) {
+  .cooperation__container {
+    padding-top: 5.4rem;
+  }
   .cooperation__row {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
@@ -1352,7 +1373,7 @@ html, body {
 
 @media screen and (max-width: 668px) {
   .case__container {
-    padding-top: 21.8rem;
+    padding-top: 5.4rem;
     background: unset;
     background-repeat: no-repeat;
     background-position: right;

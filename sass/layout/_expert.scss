@@ -111,6 +111,9 @@
          }
      }
      @media screen and (max-width:668px) {
+        &__container{
+            padding-top: 5.3rem;
+        }
          &__row{
              display: block;
          }

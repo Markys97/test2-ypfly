@@ -103,6 +103,10 @@
         }
     }
     @media screen and (max-width:668px) {
+        &__container{
+        
+              padding-top:8rem ;
+          }
         &__row{
             flex-direction: column-reverse;
             gap: 12.7rem;
