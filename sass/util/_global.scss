@@ -1,5 +1,5 @@
 html,body{
-    font-size: 0.9765625vw;
+    font-size: calc(0.605vw + 0.705vh - 0.2rem);
 }
 .section{
     position: relative;
@@ -205,7 +205,8 @@ html,body{
 
 @media screen and (max-width:1024px) {
     html,body{
-        font-size:1.497005988023592vw;
+        font-size:calc(0.505vw + 0.905vh - 0.25rem);
+
     }
     ._container{
         padding: 0 4rem;

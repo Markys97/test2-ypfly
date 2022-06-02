@@ -15,7 +15,7 @@ ul {
 }
 
 html, body {
-  font-size: 0.9765625vw;
+  font-size: calc(0.605vw + 0.705vh - 0.2rem);
 }
 
 .section {
@@ -235,7 +235,7 @@ html, body {
 
 @media screen and (max-width: 1024px) {
   html, body {
-    font-size: 1.497005988023592vw;
+    font-size: calc(0.505vw + 0.905vh - 0.25rem);
   }
   ._container {
     padding: 0 4rem;
@@ -408,7 +408,7 @@ html, body {
   .menu__item {
     margin-bottom: 3.6rem;
   }
-  .menu__link {
+  .menu__link span {
     font-family: 'Exo 2';
     font-style: normal;
     font-weight: 900;
@@ -419,7 +419,7 @@ html, body {
     -webkit-transition: all 300ms ease-in;
     transition: all 300ms ease-in;
   }
-  .menu__link:hover {
+  .menu__link span:hover {
     padding-left: 4.7rem;
     color: #777B7C;
     border-bottom: none;
@@ -453,11 +453,11 @@ html, body {
   .menu__item {
     margin-bottom: 3.6rem;
   }
-  .menu__link {
+  .menu__link span {
     font-size: 3.2rem;
     line-height: 3.2rem;
   }
-  .menu__link:hover {
+  .menu__link span:hover {
     padding-left: 1rem;
     color: #777B7C;
     border-bottom: none;

@@ -106,6 +106,7 @@
 
         }
         &__link{
+           span{
             font-family: 'Exo 2';
             font-style: normal;
             font-weight: 900;
@@ -119,6 +120,7 @@
                 color:#777B7C;
                 border-bottom: none;
             }
+           }
         }
     }
 }
@@ -151,6 +153,7 @@
 
         }
         &__link{
+           span{
             font-size: 3.2rem;
             line-height: 3.2rem;
             &:hover{
@@ -158,6 +161,7 @@
                 color:#777B7C;
                 border-bottom: none;
             }
+           }
         }
     }
 }
