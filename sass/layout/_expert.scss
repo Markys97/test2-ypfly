@@ -34,11 +34,19 @@
                 content: '';
                 display: block;
                 width: 3.35rem;
-                height: 0px;
-                border: 1px solid #FFFFFF;
+                height: 1px;
+                background: #FFFFFF;
                 bottom: 0;
                 left: 0;
+                transition: width 0.3s linear;
             }
+            &:hover {
+                &::after{
+                width: 100%;
+              }
+            }
+            
+            
             
         }
         

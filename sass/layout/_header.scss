@@ -29,15 +29,42 @@
         margin-left: 20px;
     }
     &__link{
+      span{
         font-family: 'Exo 2';
         font-style: normal;
         font-weight: 700;
         font-size: 1.6rem;
         line-height: 1.8rem;
         color: #FFFFFF;
-        &:hover{
-            border-bottom: 0.1rem solid #FFFFFF;
+        position: relative;
+        &::after{
+            position: absolute;
+          
+            content: '';
+            display: block;
+            width: 0;
+            height: 1px;
+            background: #FFFFFF;
+            bottom: -2px;
+            left: 0;
+            transition: width 0.3s linear;
         }
+        &:hover {
+            &::after{
+            width: 100%;
+          }
+        }
+        
+      }
+     &--active{
+         span{
+             &::after{
+                 width: 100%;
+             }
+         }
+     }
+
+     
     }
 }
 

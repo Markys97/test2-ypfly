@@ -86,7 +86,7 @@ html,body{
 }
 .top{
     position: absolute;
-    top: 9rem ;
+    top: 10rem ;
     right: 1rem;
    font-family: 'Exo 2';
    font-style: italic;
@@ -126,14 +126,71 @@ html,body{
 }
 
 .section-block{
-    // min-height: 53.9rem;
+    // min-height: 54.9rem;
     padding-bottom: 2rem!important;
+    
 }
 .open-menu{
     left: 0!important;
 }
 
+.fp-tableCell{
+    display: flex!important;
+    align-items: center!important;
+    justify-content: center!important;
+    
+}
 
+.cible-content-active{
+// display: block!important;
+
+
+}
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    border-radius: 26px;
+  }
+  .flip-card-back {
+    // background-color: dodgerblue;
+    // color: white;
+    transform: rotateY(180deg);
+    z-index: 100!important;
+  }
+
+  
+
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    background-color: #bbb;
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+    background-color: dodgerblue;
+    transform: rotateY(180deg);
+  }
+
+.background{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    
+}
+
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
 
 
 

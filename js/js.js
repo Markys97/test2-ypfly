@@ -26,3 +26,49 @@ menuLinks.forEach(link=>{
 
 window.addEventListener('resize',setCloseMenu)
 setCloseMenu()
+
+// cart cible logic
+
+let cibleItems= document.querySelectorAll('.item-cible');
+let nodeActive;
+let nodeNoActive;
+
+
+
+
+// cibleItems.forEach(cibleItem=>{
+    
+//     cibleItem.addEventListener('mouseenter',e=>{
+//      itemNodes= cibleItem.children
+       
+//         for(let i=0; i<itemNodes.length;i++){
+//           if(itemNodes[i].classList.contains('cible-content-active')){
+//               nodeActive= itemNodes[i]
+//           }else{
+//             nodeNoActive= itemNodes[i]
+//           }
+//         }
+       
+//         nodeActive.classList.remove('cible-content-active')
+//         nodeNoActive.classList.add('cible-content-active')
+
+//     })
+    
+//     cibleItem.addEventListener('mouseleave',e=>{
+//      itemNodes= cibleItem.children
+       
+//         for(let i=0; i<itemNodes.length;i++){
+//           if(itemNodes[i].classList.contains('cible-content-active')){
+//               nodeActive= itemNodes[i]
+//           }else{
+//             nodeNoActive= itemNodes[i]
+//           }
+//         }
+       
+//         nodeActive.classList.remove('cible-content-active')
+//         nodeNoActive.classList.add('cible-content-active')
+
+//     })
+
+
+// })
