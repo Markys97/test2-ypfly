@@ -466,7 +466,9 @@ html, body {
 
 .presentation {
   width: 100%;
-  background: linear-gradient(257.56deg, #83CAF2 22.53%, #82D6F0 69.82%);
+  -webkit-box-shadow: #82d6f0 -300px -300px 300px -120px inset;
+          box-shadow: #82d6f0 -300px -300px 300px -120px inset;
+  background: #83caf2;
 }
 
 .presentation__container {
@@ -794,8 +796,6 @@ html, body {
 
 .expert {
   width: 100%;
-  background: #000;
-  background: linear-gradient(257.56deg, #FFA16E 22.53%, #FFBD80 69.82%), linear-gradient(251.72deg, #F8DD97 15.55%, #F3CA7A 78.16%), linear-gradient(256.17deg, #4BD6C5 33.11%, #79DFCD 91.12%), linear-gradient(257.56deg, #CD96EE 22.53%, #C9B0F2 69.82%);
 }
 
 .expert__container {
@@ -925,7 +925,6 @@ html, body {
 
 .forever {
   width: 100%;
-  background: linear-gradient(257.56deg, #CD96EE 22.53%, #C9B0F2 69.82%);
 }
 
 .forever__container {
@@ -1170,7 +1169,6 @@ html, body {
 
 .cooperation {
   width: 100%;
-  background: linear-gradient(257.56deg, #F0B3A5 22.53%, #F5A693 69.82%), linear-gradient(257.56deg, #F5BD89 22.53%, #FFBD80 69.82%);
 }
 
 .cooperation__container {
@@ -1296,7 +1294,6 @@ html, body {
 
 .case {
   width: 100%;
-  background: linear-gradient(257.56deg, rgba(90, 210, 218, 0.87) 22.53%, rgba(116, 232, 232, 0.87) 69.82%), linear-gradient(251.72deg, #F8DD97 15.55%, #F3CA7A 78.16%);
 }
 
 .case__container {
