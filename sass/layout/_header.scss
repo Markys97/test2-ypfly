@@ -29,6 +29,16 @@
         margin-left: 20px;
     }
     &__link{
+        &--blue{
+         span{
+             color: #53CBF9!important;
+             &::after{
+                 background: #53CBF9!important;
+
+               
+             }
+         }
+        }
       span{
         font-family: 'Exo 2';
         font-style: normal;
@@ -37,6 +47,7 @@
         line-height: 1.8rem;
         color: #FFFFFF;
         position: relative;
+        
         &::after{
             position: absolute;
           

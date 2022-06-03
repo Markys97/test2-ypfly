@@ -75,6 +75,9 @@
 
             height: 28.5rem;
             margin: auto;
+            img{
+                max-width: unset;
+            }
         }
         &__big-word{
             position: relative;

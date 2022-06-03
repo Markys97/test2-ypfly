@@ -40,7 +40,7 @@ html, body {
   position: fixed;
   z-index: 1000;
   left: 4rem;
-  bottom: 8rem;
+  bottom: 5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -75,6 +75,10 @@ html, body {
   color: #FFFFFF;
 }
 
+.tel__link--blue {
+  color: #53CBF9 !important;
+}
+
 .burger {
   width: 33px;
   height: 18.21px;
@@ -92,6 +96,10 @@ html, body {
 
 .burger__row--small {
   width: 21.83px;
+}
+
+.burger__row--blue {
+  background: #53CBF9;
 }
 
 .title {
@@ -211,28 +219,6 @@ html, body {
   right: 0;
 }
 
-@-webkit-keyframes rotation {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(359deg);
-            transform: rotate(359deg);
-  }
-}
-
-@keyframes rotation {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(359deg);
-            transform: rotate(359deg);
-  }
-}
-
 @media screen and (max-width: 1024px) {
   html, body {
     font-size: calc(0.505vw + 0.905vh - 0.25rem);
@@ -268,10 +254,10 @@ html, body {
     padding: 0 3.1rem;
   }
   .button-fix {
-    width: auto;
-    height: auto;
-    background: unset;
-    border-radius: unset;
+    width: auto !important;
+    height: auto !important;
+    background: unset !important;
+    border-radius: unset !important;
   }
   .button-fix__img {
     display: block;
@@ -285,6 +271,12 @@ html, body {
     text-transform: uppercase;
     text-align: center;
     margin-bottom: -3rem;
+  }
+  .background {
+    min-height: 100vh;
+  }
+  .section {
+    min-height: 100vh;
   }
 }
 
@@ -337,6 +329,14 @@ html, body {
 
 .menu__item:not(:first-child) {
   margin-left: 20px;
+}
+
+.menu__link--blue span {
+  color: #53CBF9 !important;
+}
+
+.menu__link--blue span::after {
+  background: #53CBF9 !important;
 }
 
 .menu__link span {
@@ -1015,6 +1015,9 @@ html, body {
   .forever__img {
     height: 28.5rem;
     margin: auto;
+  }
+  .forever__img img {
+    max-width: unset;
   }
   .forever__big-word {
     position: relative;

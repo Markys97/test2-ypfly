@@ -7,6 +7,116 @@ if ($(window).width()<1000) {
     }, false);
 }
 $(document).ready(function(){
+    const changeColorHeader=(destination)=>{
+        if(destination=== 2){
+            $('.menu__link').addClass('menu__link--blue')
+            $('.tel__link').addClass('tel__link--blue')
+            $('.logo__img path').css({
+                fill:'#53CBF9'
+            })
+            $('.burger__row').addClass('burger__row--blue')
+
+          }else{
+            $('.menu__link').removeClass('menu__link--blue')
+            $('.tel__link').removeClass('tel__link--blue')
+            $('.logo__img path').css({
+                fill:'#fff'
+            })
+            $('.burger__row').removeClass('burger__row--blue')
+          }
+    }
+
+    const handlerButtonFixForDesktop=(sectionPosition)=>{
+        if(sectionPosition=== 2){
+                  
+            $('.button-fix ').css({
+                background:'#53CBF9',
+            })
+            $('.button-fix__text ').css({
+                color:'#fff',
+            })
+            // $('.button-fix__img circle ').css({
+            //     fill:'#53CBF9',
+            // })
+            // $('.button-fix__img path ').css({
+            //     fill:'#fff',
+            // })
+            
+           
+        }else{
+            $('.button-fix ').css({
+                background:'#fff'
+            })
+            $('.button-fix__text ').css({
+                
+                color:'#53CBF9'
+            })
+        }
+    }
+    const handlerButtonFixForMobile=(sectionPosition)=>{
+       switch(sectionPosition){
+           case 1:
+            $('.button-fix__img circle').css({
+                fill:'#fff'
+            })
+            $('.button-fix__img path').css({
+                fill:'#53CBF9'
+            })
+            break;
+        case 2:
+            $('.button-fix__img circle').css({
+                fill:'#53CBF9'
+            })
+            $('.button-fix__img path').css({
+                fill:'#fff'
+            })
+            break
+        case 3:
+            $('.button-fix__img circle').css({
+                fill:'#fff'
+            })
+            $('.button-fix__img path').css({
+                fill:'#FFBD80'
+            })
+            break
+        case 4:
+            $('.button-fix__img circle').css({
+                fill:'#fff'
+            })
+            $('.button-fix__img path').css({
+                fill:'#C9B0F2'
+            })
+            break
+        case 5:
+            $('.button-fix__img circle').css({
+                fill:'#fff'
+            })
+            $('.button-fix__img path').css({
+                fill:'#F8DD97'
+            })
+            break
+        case 6:
+            $('.button-fix__img circle').css({
+                fill:'#fff'
+            })
+            $('.button-fix__img path').css({
+                fill:'#F0B3A5'
+            })
+            break
+        case 7:
+            $('.button-fix__img circle').css({
+                fill:'#fff'
+            })
+            $('.button-fix__img path').css({
+                fill:'#74E8E8'
+            })
+            break
+         default:
+             return true
+           
+
+       }
+    }
     setTimeout(
       function() 
       {
@@ -21,6 +131,7 @@ $(document).ready(function(){
         // Параметры контента на фоне
         contentParams.push($(el).data('text')).par;
     });
+       
       // Открытие модальных блоков
       if(window.location.hash.includes('#')){
         var click = window.location.hash;
@@ -126,9 +237,11 @@ $(document).ready(function(){
     // Процесс перелистывания секций
     var sectionSettings = {
         // Скроллинг
+        
         scrollingSpeed: 800,
         fitToSectionDelay: 500,
         touchSensitivity: 15,
+        // anchors:['section_1', 'section_2', 'section_3','section_4'],
         //Дизайн
         paddingTop:'100',
         scrollHorizontally: true,
@@ -138,6 +251,9 @@ $(document).ready(function(){
         verticalCentered: true,
         responsiveWidth: 0,
         onLeave: function(origin, destination, direction){
+           // handler button fix for desktop only
+           handlerButtonFixForDesktop(destination)
+           handlerButtonFixForMobile(destination)
             // Затухание
             $('.section[data-lenght="'+destination+'"]').animate({opacity:1}, 800);
             $('.section[data-lenght="'+origin+'"]').animate({opacity:0}, 300);
@@ -146,6 +262,10 @@ $(document).ready(function(){
                 background: sectionParams[destination-1][0],
                 transition: "all 1s ease-out",
             });
+           // Изменение color header
+          
+           changeColorHeader(destination)
+           
             // Изменение цвета фона
             $('.background').css({
                 "box-shadow": "inset "+sectionParams[destination-1][2]+" "+sectionParams[destination-1][3]+" 300px "+sectionParams[destination-1][4]+""+sectionParams[destination-1][1],
@@ -158,7 +278,8 @@ $(document).ready(function(){
             $('.background div:not(.active)').html(contentParams[destination-1]).fadeIn('500');
         },
     }
-    if ($(window).width() < 1200) {
+    if ($(window).width() < 1024) {
+        
         sectionSettings = {
             // Скроллинг
             scrollingSpeed: 800,
@@ -173,6 +294,11 @@ $(document).ready(function(){
             verticalCentered: true,
             responsiveWidth: 0,
             onLeave: function(origin, destination, direction){
+               // handle button fixed on screen
+               handlerButtonFixForDesktop(destination)
+               handlerButtonFixForMobile(destination)
+                // handler menu
+                changeColorHeader(destination)
                 // Затухание
                 $('#section_'+destination).animate({opacity:1}, 800);
                 $('#section_'+origin).animate({opacity:0}, 300);
@@ -193,45 +319,50 @@ $(document).ready(function(){
                 $('.background div:not(.active)').html(contentParams[destination-1]).fadeIn('500');
             },
         }
+
+       
     }
-    if ($(window).width() < 993) {
+    // if ($(window).width() < 668) {
+    //     sectionSettings = {
+    //         // Скроллинг
+    //         scrollingSpeed: 800,
+    //         fitToSectionDelay: 500,
+    //         touchSensitivity: 15,
+    //         //Дизайн
+    //         paddingTop:'90px',
+    //         scrollHorizontally: true,
+    //         normalScrollElements: '.modal_block',
+    //         paddingBottom:'80px',
+    //         controlArrows: false,
+    //         verticalCentered: true,
+    //         responsiveWidth: 0,
+    //         onLeave: function(origin, destination, direction){
+    //             // Затухание
+    //             $('.section[data-lenght="'+destination+'"]').animate({opacity:1}, 800);
+    //             $('.section[data-lenght="'+origin+'"]').animate({opacity:0}, 300);
+    //             // Изменение фона кнопки
+    //             $('.right_slide form .btn').css({
+    //                 background: sectionParams[destination-1][0],
+    //                 transition: "all 1s ease-out",
+    //             });
+    //             // Изменение цвета фона
+    //             $('.background').css({
+    //                 "box-shadow": "inset "+sectionParams[destination-1][2]+" "+sectionParams[destination-1][3]+" 300px "+sectionParams[destination-1][4]+""+sectionParams[destination-1][1],
+    //                 background: sectionParams[destination-1][0],
+    //                 transition: "all 1s ease-out",
+    //             });
+    //             $('.background .active').fadeOut('500', function() {
+    //                 $('.background div').toggleClass('active');
+    //             });
+    //             $('.background div:not(.active)').html(contentParams[destination-1]).fadeIn('500');
+    //         },
+    //     }
+    // }
+    if ($(window).width() < 668) {
+
+      
         sectionSettings = {
-            // Скроллинг
-            scrollingSpeed: 800,
-            fitToSectionDelay: 500,
-            touchSensitivity: 15,
-            //Дизайн
-            paddingTop:'90px',
-            scrollHorizontally: true,
-            normalScrollElements: '.modal_block',
-            paddingBottom:'80px',
-            controlArrows: false,
-            verticalCentered: true,
-            responsiveWidth: 0,
-            onLeave: function(origin, destination, direction){
-                // Затухание
-                $('.section[data-lenght="'+destination+'"]').animate({opacity:1}, 800);
-                $('.section[data-lenght="'+origin+'"]').animate({opacity:0}, 300);
-                // Изменение фона кнопки
-                $('.right_slide form .btn').css({
-                    background: sectionParams[destination-1][0],
-                    transition: "all 1s ease-out",
-                });
-                // Изменение цвета фона
-                $('.background').css({
-                    "box-shadow": "inset "+sectionParams[destination-1][2]+" "+sectionParams[destination-1][3]+" 300px "+sectionParams[destination-1][4]+""+sectionParams[destination-1][1],
-                    background: sectionParams[destination-1][0],
-                    transition: "all 1s ease-out",
-                });
-                $('.background .active').fadeOut('500', function() {
-                    $('.background div').toggleClass('active');
-                });
-                $('.background div:not(.active)').html(contentParams[destination-1]).fadeIn('500');
-            },
-        }
-    }
-    if ($(window).width() < 551) {
-        sectionSettings = {
+            
             // Скроллинг
             scrollingSpeed: 800,
             fitToSectionDelay: 500,
@@ -249,6 +380,20 @@ $(document).ready(function(){
             scrollOverflow:false,
             responsiveWidth: 0,
             onLeave: function(origin, destination, direction){
+                if(destination=== 2){
+                  
+                    $('.button-fix ').css({
+                        background:'none',
+                    })
+                   
+                    
+                    
+                   
+                }
+                changeColorHeader(destination)
+                  // handle button fixed on screen
+               handlerButtonFixForDesktop(destination)
+               handlerButtonFixForMobile(destination)
                 // Затухание
                 $('.section').addClass('fp-auto-height');
                 $('#section_7').removeClass('fp-auto-height');
@@ -284,8 +429,12 @@ $(document).ready(function(){
                     $('.background div').toggleClass('active');
                 });
                 $('.background div:not(.active)').html(contentParams[destination-1]).fadeIn('500');
+
+              
+                
             },
         }
     }
+   
     $('#sections').fullpage(sectionSettings);
 });

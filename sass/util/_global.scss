@@ -20,7 +20,7 @@ html,body{
     position: fixed;
     z-index: 1000;
     left: 4rem;
-    bottom: 8rem;
+    bottom: 5rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -48,6 +48,9 @@ html,body{
         line-height: 1.9rem;
         
         color: #FFFFFF;
+        &--blue{
+            color: #53CBF9!important;
+        }
     }
 }
 
@@ -64,6 +67,9 @@ html,body{
         margin-bottom: 2.28px;
         &--small{
             width: 21.83px;
+        }
+        &--blue{
+            background: #53CBF9,
         }
     }
 }
@@ -183,14 +189,6 @@ html,body{
     
 }
 
-@keyframes rotation {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(359deg);
-    }
-  }
 
 
 
@@ -253,10 +251,10 @@ html,body{
     }
     .button-fix{
       
-        width: auto;
-        height: auto;
-        background: unset;
-        border-radius: unset;
+        width: auto !important;
+        height: auto !important;
+        background: unset !important;
+        border-radius: unset !important;
                
         &__img{
             display: block;
@@ -273,6 +271,13 @@ html,body{
         text-align: center;
         margin-bottom: -3rem;
         
+    }
+    .background{
+        min-height: 100vh;
+        
+    }
+    .section{
+      min-height: 100vh;
     }
    
 }
