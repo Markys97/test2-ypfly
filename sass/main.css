@@ -275,9 +275,6 @@ html, body {
   .background {
     min-height: 100vh;
   }
-  .section {
-    min-height: 100vh;
-  }
 }
 
 @media screen and (max-width: 320px) {
