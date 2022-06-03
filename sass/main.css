@@ -1332,6 +1332,9 @@ html, body {
   text-align: center;
   color: #FFFFFF;
   margin-bottom: 0.4rem;
+  -webkit-hyphens: none;
+      -ms-hyphens: none;
+          hyphens: none;
 }
 
 .case__text span {
