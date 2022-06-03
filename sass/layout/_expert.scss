@@ -56,9 +56,13 @@
      &__img{
         max-width: 17.4rem;
         height: 28.0rem;
+        position: relative;
+
         img{
             max-width: 100%;
             height: 100%;
+
+         
         }
      }
      &__big-word-mobile{

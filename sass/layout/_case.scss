@@ -42,9 +42,11 @@
         max-width: 74rem;
         height: 38rem;
        display: none;
+       position: relative;
         img{
             max-width: 100%;
             height: auto;
+            position: absolute;
         }
     }
     &__container-big-word{
@@ -52,7 +54,7 @@
         // margin: auto;
     }
 
-    @media screen and (max-width:1024px) {
+    @media screen and (max-width:1023px) {
         &__container{
             padding-top: 21.8rem;
             background:unset;

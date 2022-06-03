@@ -15,7 +15,7 @@ ul {
 }
 
 html, body {
-  font-size: calc(0.605vw + 0.705vh - 0.2rem);
+  font-size: calc(0.605vw + 0.705vh - 0rem);
 }
 
 .section {
@@ -221,7 +221,7 @@ html, body {
 
 @media screen and (max-width: 1024px) {
   html, body {
-    font-size: calc(0.505vw + 0.905vh - 0.25rem);
+    font-size: calc(0.505vw + 0.905vh - 0.17rem);
   }
   ._container {
     padding: 0 4rem;
@@ -541,6 +541,8 @@ html, body {
   line-height: 2rem;
   color: #158CD0;
   cursor: pointer !important;
+  -webkit-transition: color 300ms ease;
+  transition: color 300ms ease;
 }
 
 .presentation__btn:hover {
@@ -643,7 +645,7 @@ html, body {
 }
 
 .cible__container {
-  padding-top: 7.8rem;
+  padding-top: 6.3rem;
 }
 
 .cible__title {
@@ -859,6 +861,7 @@ html, body {
 .expert__img {
   max-width: 17.4rem;
   height: 28.0rem;
+  position: relative;
 }
 
 .expert__img img {
@@ -954,10 +957,12 @@ html, body {
 .forever__img {
   width: 24.6rem;
   height: 34.0rem;
+  position: relative;
 }
 
 .forever__img img {
-  max-width: 100%;
+  position: relative;
+  max-width: auto;
   height: 100%;
 }
 
@@ -1096,9 +1101,11 @@ html, body {
 .road__img {
   width: 46.5rem;
   height: 33.8rem;
+  position: relative;
 }
 
 .road__img img {
+  position: absolute;
   max-width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -1188,10 +1195,11 @@ html, body {
 .cooperation__img {
   max-width: 37.2rem;
   height: 34.7rem;
+  position: relative;
 }
 
 .cooperation__img img {
-  max-width: 100%;
+  max-width: auto;
   height: 100%;
 }
 
@@ -1342,18 +1350,20 @@ html, body {
   max-width: 74rem;
   height: 38rem;
   display: none;
+  position: relative;
 }
 
 .case__img img {
   max-width: 100%;
   height: auto;
+  position: absolute;
 }
 
 .case__container-big-word {
   max-width: 44.8rem;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   .case__container {
     padding-top: 21.8rem;
     background: unset;

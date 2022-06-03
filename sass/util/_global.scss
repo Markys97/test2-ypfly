@@ -1,5 +1,6 @@
 html,body{
-    font-size: calc(0.605vw + 0.705vh - 0.2rem);
+    font-size: calc(0.605vw + 0.705vh - 0rem);
+    
     
 }
 .section{
@@ -204,7 +205,8 @@ html,body{
 
 @media screen and (max-width:1024px) {
     html,body{
-        font-size:calc(0.505vw + 0.905vh - 0.25rem);
+        font-size: calc(0.505vw + 0.905vh - 0.17rem);
+
 
     }
     ._container{

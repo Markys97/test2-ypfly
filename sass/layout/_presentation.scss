@@ -63,6 +63,7 @@
         line-height: 2rem;
         color: #158CD0;
         cursor: pointer!important;
+        transition: color 300ms ease;
         &:hover{
             color: #83CAF2;
         }

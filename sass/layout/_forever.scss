@@ -20,9 +20,12 @@
     &__img{
         width: 24.6rem;
         height: 34.0rem;
+        position: relative;
         img{
-            max-width: 100%;
+         position: relative;
+            max-width: auto;
             height: 100%;
+         
         }
     }
     &__body{

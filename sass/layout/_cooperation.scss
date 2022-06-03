@@ -12,10 +12,12 @@
      &__img{
         max-width: 37.2rem;
         height: 34.7rem;
+        position: relative;
         // border:1px solid red;
         img{
-            max-width: 100%;
+            max-width: auto;
             height: 100%;
+          
         }
 
      }

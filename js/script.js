@@ -7,6 +7,7 @@ if ($(window).width()<1000) {
     }, false);
 }
 $(document).ready(function(){
+    let menuLinks= $('.menu__link')
     const changeColorHeader=(destination)=>{
         if(destination=== 2){
             $('.menu__link').addClass('menu__link--blue')
@@ -35,14 +36,6 @@ $(document).ready(function(){
             $('.button-fix__text ').css({
                 color:'#fff',
             })
-            // $('.button-fix__img circle ').css({
-            //     fill:'#53CBF9',
-            // })
-            // $('.button-fix__img path ').css({
-            //     fill:'#fff',
-            // })
-            
-           
         }else{
             $('.button-fix ').css({
                 background:'#fff'
@@ -51,6 +44,54 @@ $(document).ready(function(){
                 
                 color:'#53CBF9'
             })
+            switch(sectionPosition){
+                case 1:
+                    $('.button-fix__text ').css({
+                
+                        color:'#53CBF9'
+                    })
+                 break;
+             case 2:
+                $('.button-fix__text ').css({
+                
+                    color:'#53CBF9'
+                })
+                 break
+             case 3:
+                $('.button-fix__text ').css({
+                
+                    color:'#FFA16E',
+                })
+                 break
+             case 4:
+                $('.button-fix__text ').css({
+                
+                    color:'#CD96EE',
+                })
+                 break
+             case 5:
+                $('.button-fix__text ').css({
+                
+                    color:'#F8DD97',
+                })
+                 break
+             case 6:
+                $('.button-fix__text ').css({
+                
+                    color:'#F0B3A5',
+                })
+                 break
+             case 7:
+                $('.button-fix__text ').css({
+                
+                    color:'#5AD2DADE',
+                })
+                 break
+              default:
+                  return true
+                
+     
+            }
         }
     }
     const handlerButtonFixForMobile=(sectionPosition)=>{
@@ -116,6 +157,31 @@ $(document).ready(function(){
            
 
        }
+    }
+    const setActiveLink=(position)=>{
+       
+        menuLinks.each((index,link)=>{
+         menuLinks.each((index,link)=>{
+             if($(link).hasClass('menu__link--active')){
+                 $(link).removeClass('menu__link--active');
+            }
+            if(position === $(link).data('position')){
+                $(link).addClass('menu__link--active')
+            }
+            if($(link).data('position')===3){
+                if(position===4 || position===5){
+                    $(link).addClass('menu__link--active')
+                }
+            }
+            if($(link).data('position')===6){
+                if( position===7){
+                    $(link).addClass('menu__link--active')
+                }
+            }
+           
+         })
+       
+        })
     }
     setTimeout(
       function() 
@@ -237,12 +303,12 @@ $(document).ready(function(){
     // Процесс перелистывания секций
     var sectionSettings = {
         // Скроллинг
-        
+      
         scrollingSpeed: 800,
         fitToSectionDelay: 500,
         touchSensitivity: 15,
-        // anchors:['section_1', 'section_2', 'section_3','section_4'],
-        //Дизайн
+        lookAnchors:true,
+        //Дизай
         paddingTop:'100',
         scrollHorizontally: true,
         normalScrollElements: '.modal_block',
@@ -251,9 +317,11 @@ $(document).ready(function(){
         verticalCentered: true,
         responsiveWidth: 0,
         onLeave: function(origin, destination, direction){
+          
            // handler button fix for desktop only
            handlerButtonFixForDesktop(destination)
            handlerButtonFixForMobile(destination)
+           setActiveLink(destination)
             // Затухание
             $('.section[data-lenght="'+destination+'"]').animate({opacity:1}, 800);
             $('.section[data-lenght="'+origin+'"]').animate({opacity:0}, 300);
@@ -283,6 +351,7 @@ $(document).ready(function(){
         sectionSettings = {
             // Скроллинг
             scrollingSpeed: 800,
+          
             fitToSectionDelay: 500,
             touchSensitivity: 15,
             //Дизайн
@@ -297,6 +366,7 @@ $(document).ready(function(){
                // handle button fixed on screen
                handlerButtonFixForDesktop(destination)
                handlerButtonFixForMobile(destination)
+               setActiveLink(destination)
                 // handler menu
                 changeColorHeader(destination)
                 // Затухание
@@ -364,6 +434,7 @@ $(document).ready(function(){
         sectionSettings = {
             
             // Скроллинг
+          
             scrollingSpeed: 800,
             fitToSectionDelay: 500,
             touchSensitivity: 15,
@@ -394,6 +465,7 @@ $(document).ready(function(){
                   // handle button fixed on screen
                handlerButtonFixForDesktop(destination)
                handlerButtonFixForMobile(destination)
+                 setActiveLink(destination)
                 // Затухание
                 $('.section').addClass('fp-auto-height');
                 $('#section_7').removeClass('fp-auto-height');
