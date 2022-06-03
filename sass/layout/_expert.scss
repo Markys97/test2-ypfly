@@ -59,9 +59,10 @@
         position: relative;
 
         img{
-            max-width: 100%;
+            max-width: auto;
             height: 100%;
-
+            position: absolute;
+            right: 0;
          
         }
      }

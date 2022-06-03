@@ -20,6 +20,11 @@
         img{
             padding: 1rem;
         }
+       svg:hover{
+         rect{
+            fill:#777B7C;
+        }
+       }
     }
     &__list{
         display: flex;

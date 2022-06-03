@@ -75,6 +75,7 @@
     }
 
     @media screen and (max-width:1024px) {
+        // background: unset;
         &__row{
             flex-direction: column-reverse;
             gap: 12.7rem;
