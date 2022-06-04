@@ -1,16 +1,16 @@
 .road{
     width: 100%;
-    // background: linear-gradient(251.72deg, #F8DD97 15.55%, #F3CA7A 78.16%),
-    //  linear-gradient(256.17deg, #4BD6C5 33.11%, #79DFCD 91.12%),
-    //   linear-gradient(257.56deg, #CD96EE 22.53%, #C9B0F2 69.82%);
+    background: linear-gradient(251.72deg, #F8DD97 15.55%, #F3CA7A 78.16%),
+     linear-gradient(256.17deg, #4BD6C5 33.11%, #79DFCD 91.12%),
+      linear-gradient(257.56deg, #CD96EE 22.53%, #C9B0F2 69.82%);
     &__container{
         padding-top: 19rem;
         position: relative;
     }
     &__top{
+        padding-top: 1rem;
         max-width: 31.9rem;
-        
-      
+        top: 11rem;
     }
     &__row{
         display: flex;
@@ -35,13 +35,9 @@
     &__img{
         width: 46.5rem;
         height: 33.8rem;
-
-        position: relative;
         img{
-            position: absolute;
             max-width: 100%;
             height: 100%;
-            object-fit: cover;
         }
     }
     &__container-big-word{
@@ -81,10 +77,6 @@
 
     }
     @media screen and (max-width:668px) {
-        &__container{
-            padding-top: 5.3rem;
-        
-        }
         
         &__body{
             max-width: 100%;

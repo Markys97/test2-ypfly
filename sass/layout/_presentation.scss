@@ -1,11 +1,10 @@
 .presentation{
     width: 100%;
     
-    box-shadow: rgb(130, 214, 240) -300px -300px 300px -120px inset; 
-    background: rgb(131, 202, 242);
+    background: linear-gradient(257.56deg, #83CAF2 22.53%, #82D6F0 69.82%);
     &__container{
       min-height: 100%;
-        padding-top:15.6rem ;
+        padding-top:10.9rem ;
     }
     &__content{
         position: relative;
@@ -63,7 +62,6 @@
         line-height: 2rem;
         color: #158CD0;
         cursor: pointer!important;
-        transition: color 300ms ease;
         &:hover{
             color: #83CAF2;
         }
@@ -75,7 +73,6 @@
     }
 
     @media screen and (max-width:1024px) {
-        // background: unset;
         &__row{
             flex-direction: column-reverse;
             gap: 12.7rem;
@@ -106,11 +103,6 @@
         }
     }
     @media screen and (max-width:668px) {
-        box-shadow: none;
-        &__container{
-        
-              padding-top:8rem ;
-          }
         &__row{
             flex-direction: column-reverse;
             gap: 12.7rem;

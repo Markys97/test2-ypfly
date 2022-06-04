@@ -8,50 +8,37 @@
     <link href="https://fonts.googleapis.com/css?family=Exo+2:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic"
      rel="stylesheet" />
      <link href="https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900" rel="stylesheet" />
-     <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.css">
     <title>upfly</title>
 </head>
 <body>
     <div class="wrapper">
-
         <!-- header -->
         <header class="header">
             <div class="header__container _container">
                 <div class="header__burger burger">
-                    <span class="burger__row"></span>
-                    <span class="burger__row burger__row--small"></span>
-                    <span class="burger__row"></span>
+                    <span class="burger__row burger__row--blue"></span>
+                    <span class="burger__row burger__row--blue burger__row--small"></span>
+                    <span class="burger__row burger__row--blue"></span>
                 </div>
                 <div class="header__tel tel">
-                    <a class="tel__link "  href="tel:+78314239533">+7 831 423 95 33</a>
+                    <a class="tel__link tel__link--blue"  href="tel:+78314239533">+7 831 423 95 33</a>
                 </div>
                 <nav class="header__menu menu">
                     <div class="menu__close-btn">
-                        <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="39.7039" height="7.94079" rx="3.97039" transform="matrix(0.706524 0.707689 -0.706524 0.707689 5.94727 0.282227)" fill="#D6DDE0"/>
-                            <rect width="39.7039" height="7.94079" rx="3.97039" transform="matrix(0.706524 -0.707689 0.706524 0.707689 0 28.0981)" fill="#D6DDE0"/>
-                        </svg>
+                        <img src="./img/icon close.png" alt=" icon close button">
                     </div>
                     <ul class="menu__list">
                         <li class="menu__item">
-                            <a href="#section_1" class="menu__link menu__link--active " data-position="1">
-                                <span>Главная</span>
-                            </a>
+                            <a href="#" class="menu__link">Главная</a>
                         </li>
                         <li class="menu__item">
-                            <a href="#section_2" class="menu__link " data-position="2">
-                                <span>Для кого</span>
-                            </a>
+                            <a href="#" class="menu__link">Для кого</a>
                         </li>
                         <li class="menu__item">
-                            <a href="#section_3" class="menu__link" data-position="3">
-                                <span>Почему мы</span>
-                            </a>
+                            <a href="#" class="menu__link">Почему мы</a>
                         </li>
                         <li class="menu__item">
-                            <a href="#section_6" class="menu__link" data-position="6">
-                                <span class="menu__link-text ">Что получаете</span>
-                            </a>
+                            <a href="#" class="menu__link">Что получаете</a>
                         </li>
                     </ul>
                 </nav>
@@ -82,21 +69,9 @@
                 </div>
             </div>
         </header>
-        <a href="#" class="button-fix">
-            <span class="button-fix__text">Связаться с нами</span>
-            <svg  class="button-fix__img" width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle class="button-fix__circle" cx="28" cy="28" r="28" fill="white"/>
-                <path d="M38.6782 38C39.2626 38 39.7691 37.8111 40.1995 37.438L32.8334 30.2261C32.6567 30.35 32.4854 30.4705 32.3236 30.585C31.7723 30.9827 31.3249 31.293 30.9814 31.5153C30.6379 31.7381 30.1809 31.9653 29.6104 32.1972C29.0395 32.4294 28.5076 32.5451 28.0143 32.5451H27.9854C27.492 32.5451 26.9601 32.4294 26.3893 32.1972C25.8184 31.9653 25.3614 31.7381 25.0182 31.5153C24.6747 31.293 24.2276 30.9827 23.676 30.585C23.5223 30.4747 23.3519 30.3537 23.1676 30.2242L15.8001 37.438C16.2305 37.8111 16.7373 38 17.3217 38H38.6782Z" fill="#53CBF9"/>
-                <path d="M16.4655 25.6848C15.9143 25.325 15.4255 24.9129 15 24.4488V35.4212L21.4925 29.0649C20.1936 28.1771 18.5201 27.0517 16.4655 25.6848Z" fill="#53CBF9"/>
-                <path d="M39.5491 25.6848C37.573 26.9943 35.8934 28.1216 34.5101 29.0674L41 35.4215V24.4488C40.5839 24.9036 40.1003 25.3154 39.5491 25.6848Z" fill="#53CBF9"/>
-                <path d="M38.6779 18H17.3214C16.5764 18 16.0036 18.2463 15.6023 18.7385C15.2007 19.2308 15.0002 19.8466 15.0002 20.585C15.0002 21.1815 15.2662 21.8278 15.7981 22.5241C16.3299 23.2202 16.8958 23.7669 17.4956 24.1645C17.8243 24.392 18.8158 25.0668 20.47 26.1888C21.3629 26.7946 22.1395 27.3226 22.8068 27.7783C23.3756 28.1663 23.8661 28.5023 24.2712 28.7812C24.3177 28.8131 24.3908 28.8643 24.4878 28.9323C24.5924 29.0058 24.7247 29.0991 24.8879 29.2145C25.2023 29.437 25.4634 29.617 25.6714 29.7544C25.8791 29.8919 26.1307 30.0455 26.4259 30.216C26.7209 30.3863 26.9991 30.5143 27.2602 30.5995C27.5214 30.6846 27.7632 30.7273 27.9856 30.7273H28.0145C28.2369 30.7273 28.4787 30.6846 28.7399 30.5995C29.001 30.5143 29.279 30.3866 29.5742 30.216C29.8691 30.0455 30.1205 29.8916 30.3288 29.7544C30.5368 29.617 30.7979 29.4371 31.1123 29.2145C31.2752 29.0991 31.4075 29.0057 31.5121 28.9325C31.6092 28.8643 31.6822 28.8134 31.729 28.7812C32.0445 28.5662 32.5362 28.2316 33.1973 27.7822C34.4001 26.964 36.1716 25.7597 38.5191 24.1645C39.2251 23.6817 39.815 23.0991 40.2891 22.4175C40.7623 21.7359 40.9995 21.0209 40.9995 20.2728C40.9995 19.6478 40.7695 19.1129 40.3104 18.6675C39.8509 18.2226 39.3067 18 38.6779 18Z" fill="#53CBF9"/>
-            </svg>
-                
-        </a>
-        <div class="background"></div>
         <div class="wrapper-section" id="sections">
             <!-- presentation -->
-            <section class="presentation section section-block "   id="section_1" data-text="marketing" data-params="#83CAF2;#82D6F0;-300px;-300px;-120px">
+            <section class="presentation section-block section_1">
                 <div class="presentation__container _container">
                     <div class="presentation__content">
                         <div class="presentation__row">
@@ -119,94 +94,32 @@
                             marketing
                         </div>
                     </div>
-                    
+                    <a href="#" class="button-fix">
+                        <span class="button-fix__text">Связаться с нами</span>
+                        <svg  class="button-fix__img" width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="28" cy="28" r="28" fill="white"/>
+                            <path d="M38.6782 38C39.2626 38 39.7691 37.8111 40.1995 37.438L32.8334 30.2261C32.6567 30.35 32.4854 30.4705 32.3236 30.585C31.7723 30.9827 31.3249 31.293 30.9814 31.5153C30.6379 31.7381 30.1809 31.9653 29.6104 32.1972C29.0395 32.4294 28.5076 32.5451 28.0143 32.5451H27.9854C27.492 32.5451 26.9601 32.4294 26.3893 32.1972C25.8184 31.9653 25.3614 31.7381 25.0182 31.5153C24.6747 31.293 24.2276 30.9827 23.676 30.585C23.5223 30.4747 23.3519 30.3537 23.1676 30.2242L15.8001 37.438C16.2305 37.8111 16.7373 38 17.3217 38H38.6782Z" fill="#53CBF9"/>
+                            <path d="M16.4655 25.6848C15.9143 25.325 15.4255 24.9129 15 24.4488V35.4212L21.4925 29.0649C20.1936 28.1771 18.5201 27.0517 16.4655 25.6848Z" fill="#53CBF9"/>
+                            <path d="M39.5491 25.6848C37.573 26.9943 35.8934 28.1216 34.5101 29.0674L41 35.4215V24.4488C40.5839 24.9036 40.1003 25.3154 39.5491 25.6848Z" fill="#53CBF9"/>
+                            <path d="M38.6779 18H17.3214C16.5764 18 16.0036 18.2463 15.6023 18.7385C15.2007 19.2308 15.0002 19.8466 15.0002 20.585C15.0002 21.1815 15.2662 21.8278 15.7981 22.5241C16.3299 23.2202 16.8958 23.7669 17.4956 24.1645C17.8243 24.392 18.8158 25.0668 20.47 26.1888C21.3629 26.7946 22.1395 27.3226 22.8068 27.7783C23.3756 28.1663 23.8661 28.5023 24.2712 28.7812C24.3177 28.8131 24.3908 28.8643 24.4878 28.9323C24.5924 29.0058 24.7247 29.0991 24.8879 29.2145C25.2023 29.437 25.4634 29.617 25.6714 29.7544C25.8791 29.8919 26.1307 30.0455 26.4259 30.216C26.7209 30.3863 26.9991 30.5143 27.2602 30.5995C27.5214 30.6846 27.7632 30.7273 27.9856 30.7273H28.0145C28.2369 30.7273 28.4787 30.6846 28.7399 30.5995C29.001 30.5143 29.279 30.3866 29.5742 30.216C29.8691 30.0455 30.1205 29.8916 30.3288 29.7544C30.5368 29.617 30.7979 29.4371 31.1123 29.2145C31.2752 29.0991 31.4075 29.0057 31.5121 28.9325C31.6092 28.8643 31.6822 28.8134 31.729 28.7812C32.0445 28.5662 32.5362 28.2316 33.1973 27.7822C34.4001 26.964 36.1716 25.7597 38.5191 24.1645C39.2251 23.6817 39.815 23.0991 40.2891 22.4175C40.7623 21.7359 40.9995 21.0209 40.9995 20.2728C40.9995 19.6478 40.7695 19.1129 40.3104 18.6675C39.8509 18.2226 39.3067 18 38.6779 18Z" fill="#53CBF9"/>
+                        </svg>
+                            
+                    </a>
                 </div>
                 
             </section>
-             <!-- cible -->
-            <section class="cible section section-block "   id="section_2" data-text="experience" data-params="#fff;#fff;-300px;-300px;-120px">
+            <section class="cible section-block section_2">
                 <div class="cible__container _container">
                     <h2 class="cible__title title title--black">Для кого наша экспертиза</h2>
-                    <div class="cible__container-row">
-                        <div class="cible__row">
-                            <div class="cible__item item-cible">
-                                <div class="item-cible__container">
-                                    <div class="item-cible__head cible-content-active flip-card-front">
-                                        <h4 class="item-cible__title">Для <br> стоматологии</h4>
-                                        <div class="item-cible__img">
-                                            <img src="./img/стоматология 1.png" alt=" illustration picture of tooth">
-                                        </div>
-                                    </div>
-                                    <div class="item-cible__body  flip-card-back">
-                                        <p class="item-cible__text">
-                                            Определяем стратегию в зависимости от направления. Разделяем каждое направление
-                                        </p>
-                                        <p class="item-cible__text">
-                                            Проанализируем конкурентов и покупательский спрос по каждому направлению, будь это имплантация,
-                                             ортодонтия, профгигиена или любое другое которое хотите развивать.
-                                        </p>
-                                        <p class="item-cible__text">
-                                            Сформируем сильное конкурентное предложение по каждому направлению, на их базе разработаем рекламные
-                                             материалы и настроим эффективные рекламные кампании с высокой конверсией.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- item cible -->
-                            <div class="cible__item item-cible">
-                                <div class="item-cible__container">
-                                    <div class="item-cible__head flip-card-front">
-                                        <h4 class="item-cible__title">Для <br>косметологии</h4>
-                                        <div class="item-cible__img">
-                                            <img src="./img/стоматология 3.png" alt=" illustration picture of medical cosmetics">
-                                        </div>
-                                    </div>
-                                    <div class="item-cible__body cible-content-active flip-card-back">
-                                        <p class="item-cible__text">
-                                            Проанализируем спрос на ту или иную косметологическую услугу и активность конкурентов по каждой из них.
-                                        </p>
-                                        <p class="item-cible__text">
-                                            Статус официального партнера Яндекса позволяет нам получить много полезной информации недоступной для обычных агентств.
-                                        </p>
-                                        <p class="item-cible__text">
-                                            Мы знаем как создать наиболее привлекательное предложение для вашего потенциального клиента по таким направлениям как эстетическая,
-                                             врачебная косметология и другим наиболее приоритетным для вашей клиники.
-                                        </p>
-                                       
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- item cible -->
-                            <div class="cible__item item-cible">
-                                <div class="item-cible__container">
-                                    <div class="item-cible__head cible-content-active flip-card-front">
-                                        <h4 class="item-cible__title">Для <br> многопрофильных <br> клиник</h4>
-                                        <div class="item-cible__img">
-                                            <img src="./img/стоматология 2.png" alt=" illustration picture of medical staf">
-                                        </div>
-                                    </div>
-                                    <div class="item-cible__body flip-card-back">
-                                        <p class="item-cible__text">
-                                            Мы на практике знаем, как клинике получить нового клиента, какая контекстная реклама работает,
-                                             а какая деньги на ветер, какие типичные ошибки допускают мед. центры на сайте при формировании воронки продаж,
-                                             а какие ошибки делают при обработке заявок или звонков уже менеджеры клиник.
-                                        </p>
-                                        <p class="item-cible__text">
-                                            Регулярная системная аналитика по каждому направлению позволяет в кратчайшие сроки оптимизировать все рекламные
-                                             активности и значительно экономить рекламный бюджет.
-                                        </p>
-                                       
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- item cible -->
-                         
+                    <div class="cible__row">
+                        <div class="cible__item item-cible">
+                            
                         </div>
                     </div>
                 </div>
             </section>
             <!-- expert -->
-            <section class=" expert section section-block "   id="section_3"  data-text="experts" data-params="#FFA16E;#FFBD80;-300px;-300px;-120px">
+            <section class=" expert section-block section_3">
                 <div class="expert__container _container">
                     <div class="expert__row">
                         <div class="expert__body">
@@ -235,7 +148,7 @@
                 </div>
             </section>
             <!-- together foever -->
-            <section class="forever section section-block "   id="section_4"  data-text="experts" data-params="#CD96EE;#C9B0F2;-300px;-300px;-120px">
+            <section class="forever section-block section_4">
                 <div class="forever__container _container">
                     <div class="forever__top top">
                         Медицина – это индустрия, в которой нет желаний. Люди мечтают купить новый телефон,
@@ -267,7 +180,7 @@
                 </div>
             </section>
             <!-- Road with clear markings -->
-            <section class="road section section-block "  id="section_5"   data-text="experts" data-params="#F8DD97;#F3CA7A;-300px;-300px;-120px">
+            <section class="road section-block section_5">
                 <div class="road__container _container">
                     <div class="road__top top">
                         Основная цель правильной клиники – вызвать доверие у пациента.
@@ -294,7 +207,7 @@
                 </div>
             </section>
             <!-- cooperation -->
-            <section class="cooperation section section-block "   id="section_6"  data-text="working" data-params="#F0B3A5;#F5A693;-300px;-300px;-120px">
+            <section class="cooperation section-block section_6">
                 <div class="cooperation__container _container">
                     <div class="cooperation__row">
                         <div class="cooperation__img">
@@ -329,74 +242,9 @@
                     </div>
                 </div>
             </section>
-             <!-- cases -->
-            <section class="case section section-block "  id="section_7"  data-text="cases" data-params="#4BD6C5;#79DFCD;-300px;-300px;-120px">
-                <div class="case__container _container">
-                    <div class="case__content">
-                        <div class="case__body">
-                            <p class="case__text">
-                                О том как и каких результатов мы добиваемся для своих клиентов,
-                                 и что мы мы можем сделать именно для вашего бизнеса, вы  можете узнать позвонив по телефону
-                                 <span> <nobr>+7 831 423 95 33</nobr></span> 
-                            </p>
-                         
-                        </div>
-
-                        <div class="case__img">
-                            <img src="./img/phone.png" alt="phone picture illustration">
-                        </div>
-                    </div>
-                    <div class="case__containner-big-word big-word"> 
-                        <div class="case__big-word">
-                            cases
-                        </div>
-                    </div>
-                </div>
-            </section>
         </div>
        
     </div>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src=" https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/vendors/scrolloverflow.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.js"></script>
     <script src="./js/js.js"></script>
-    <script src="./js/script.js"></script>
 </body>
 </html>
-
-
-
-
-<!-- 
-      <div class="cible__container _container">
-                    <h2 class="cible__title title title--black">Для кого наша экспертиза</h2>
-                  <div class="cible__container-row">
-                    <div class="cible__row">
-                        <div class="cible__item item-cible">
-                            <h3 class="item-cible__title">Для <br>    стоматологии</h3>
-                            <div class="item-cible__img">
-                                <img src="./img/стоматология 1.png" alt=" tooth picture illustration">
-                            </div>
-                        </div>
-                        <div class="cible-cible__item item-cible">
-                            <p class="item-cible__text">
-                                Проанализируем спрос на ту или иную косметологическую услугу и активность конкурентов по каждой из них.
-                            </p>
-                            <p class="item-cible__text">
-                                Статус официального партнера Яндекса позволяет нам получить много полезной информации недоступной для обычных агентств.
-                            </p>
-                            <p class="item-cible__text">
-                                Мы знаем как создать наиболее привлекательное предложение для вашего потенциального клиента по таким направлениям как эстетическая,
-                                 врачебная косметология и другим наиболее приоритетным для вашей клиники.
-                            </p>
-                        </div>
-                        <div class="cible__item item-cible">
-                            <h3 class="item-cible__title">Для многопрофильных клиник</h3>
-                            <div class="item-cible__img">
-                                <img src="./img/стоматология 2.png" alt=" medical staf picture illustration">
-                            </div>
-                        </div>
-                    </div>
-                  </div>
-                </div>
- -->

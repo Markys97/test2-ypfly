@@ -1,7 +1,5 @@
 html,body{
-    font-size: calc(0.605vw + 0.705vh - 0rem);
-    
-    
+    font-size: 10px;
 }
 .section{
     position: relative;
@@ -20,9 +18,9 @@ html,body{
 }
 .button-fix{
     position: fixed;
-    z-index: 1000;
+    z-index: 100;
     left: 4rem;
-    bottom: 5rem;
+    bottom: 8rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -50,9 +48,6 @@ html,body{
         line-height: 1.9rem;
         
         color: #FFFFFF;
-        &--blue{
-            color: #53CBF9!important;
-        }
     }
 }
 
@@ -70,9 +65,6 @@ html,body{
         &--small{
             width: 21.83px;
         }
-        &--blue{
-            background: #53CBF9,
-        }
     }
 }
 
@@ -88,14 +80,14 @@ html,body{
         font-size: 2.6rem;
         line-height: 3.1rem;
     }
-    &--black{
-        color: #6D6D6D;
-    }
 }
 .top{
     position: absolute;
-    top: 10rem ;
+    
+
     right: 1rem;
+    top: 3.5rem ;
+ 
    font-family: 'Exo 2';
    font-style: italic;
    font-weight: 500;
@@ -134,62 +126,12 @@ html,body{
 }
 
 .section-block{
-    // min-height: 54.9rem;
-   
-    
+    min-height: 53.9rem;
 }
 .open-menu{
     left: 0!important;
 }
 
-.fp-tableCell{
-    display: flex!important;
-    align-items: center!important;
-    justify-content: center!important;
-    
-}
-
-.cible-content-active{
-// display: block!important;
-
-
-}
-.flip-card-front, .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden; /* Safari */
-    backface-visibility: hidden;
-    border-radius: 26px;
-  }
-  .flip-card-back {
-    // background-color: dodgerblue;
-    // color: white;
-    transform: rotateY(180deg);
-    z-index: 100!important;
-  }
-
-  
-
-  /* Style the front side (fallback if image is missing) */
-  .flip-card-front {
-    background-color: #bbb;
-  }
-  
-  /* Style the back side */
-  .flip-card-back {
-    background-color: dodgerblue;
-    transform: rotateY(180deg);
-  }
-
-.background{
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    
-}
 
 
 
@@ -205,9 +147,7 @@ html,body{
 
 @media screen and (max-width:1024px) {
     html,body{
-        font-size: calc(0.505vw + 0.905vh - 0.17rem);
-
-
+        font-size: 0.9765625vw;
     }
     ._container{
         padding: 0 4rem;
@@ -217,13 +157,13 @@ html,body{
         display: none;
     }
     .section-block{
-        // min-height: 96rem;
+        min-height: 96rem;
     }
     .title{
-        // font-family: 'Exo 2';
-        // font-style: normal;
-        // font-weight: 800;
-        // color: #FFFFFF;
+        font-family: 'Exo 2';
+        font-style: normal;
+        font-weight: 800;
+        color: #FFFFFF;
         font-size: 2.4rem;
         line-height: 2.6rem;
         &--big{
@@ -247,17 +187,17 @@ html,body{
 
 @media screen and (max-width:668px) {
     html,body{
-        font-size: 10px;
+        font-size: 1.497005988023592vw;
     }
     ._container{
         padding: 0 3.1rem;
     }
     .button-fix{
       
-        width: auto !important;
-        height: auto !important;
-        background: unset !important;
-        border-radius: unset !important;
+        width: auto;
+        height: auto;
+        background: unset;
+        border-radius: unset;
                
         &__img{
             display: block;
@@ -272,15 +212,11 @@ html,body{
         line-height: 6.0rem;
         text-transform: uppercase;
         text-align: center;
-        margin-bottom: -3rem;
-        
-    }
-    .background{
-        min-height: 100vh;
-        
-    }
-    .section{
-    //   min-height: 100vh;
+        position: absolute!important;
+        left: 50%;
+        bottom: 0rem!important;
+        transform: translateX(-50%);
+        display: none!important;
     }
    
 }

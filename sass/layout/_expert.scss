@@ -1,9 +1,10 @@
 .expert{
     width: 100%;
-    // background: linear-gradient(257.56deg, #FFA16E 22.53%, #FFBD80 69.82%),
-    //  linear-gradient(251.72deg, #F8DD97 15.55%, #F3CA7A 78.16%),
-    //  linear-gradient(256.17deg, #4BD6C5 33.11%, #79DFCD 91.12%), 
-    //  linear-gradient(257.56deg, #CD96EE 22.53%, #C9B0F2 69.82%);
+    background: #000;
+    background: linear-gradient(257.56deg, #FFA16E 22.53%, #FFBD80 69.82%),
+     linear-gradient(251.72deg, #F8DD97 15.55%, #F3CA7A 78.16%),
+     linear-gradient(256.17deg, #4BD6C5 33.11%, #79DFCD 91.12%), 
+     linear-gradient(257.56deg, #CD96EE 22.53%, #C9B0F2 69.82%);
      &__container{
          padding-top: 19.6rem;
      }
@@ -18,7 +19,7 @@
         //  border:1px solid white;
      }
      &__text{
-        font-family: 'Exo 2';
+        font-family: 'Exo 2.0';
         font-style: normal;
         font-weight: 500;
         font-size: 1.6rem;
@@ -33,19 +34,11 @@
                 content: '';
                 display: block;
                 width: 3.35rem;
-                height: 1px;
-                background: #FFFFFF;
+                height: 0px;
+                border: 1px solid #FFFFFF;
                 bottom: 0;
                 left: 0;
-                transition: width 0.3s linear;
             }
-            &:hover {
-                &::after{
-                width: 100%;
-              }
-            }
-            
-            
             
         }
         
@@ -56,14 +49,9 @@
      &__img{
         max-width: 17.4rem;
         height: 28.0rem;
-        position: relative;
-
         img{
-            max-width: auto;
+            max-width: 100%;
             height: 100%;
-            position: absolute;
-            right: 0;
-         
         }
      }
      &__big-word-mobile{
@@ -115,9 +103,6 @@
          }
      }
      @media screen and (max-width:668px) {
-        &__container{
-            padding-top: 5.3rem;
-        }
          &__row{
              display: block;
          }
