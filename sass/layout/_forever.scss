@@ -1,12 +1,13 @@
 .forever{
     width: 100%;
-    background: linear-gradient(257.56deg, #CD96EE 22.53%, #C9B0F2 69.82%);
+    // background: linear-gradient(257.56deg, #CD96EE 22.53%, #C9B0F2 69.82%);
     &__container{
         padding-top: 13rem;
      position: relative;
     }
     &__top{
         width: 36.8rem;
+       
     }
     &__row{
         display: flex;
@@ -19,9 +20,12 @@
     &__img{
         width: 24.6rem;
         height: 34.0rem;
+        position: relative;
         img{
-            max-width: 100%;
+         position: relative;
+            max-width: auto;
             height: 100%;
+         
         }
     }
     &__body{
@@ -74,14 +78,25 @@
 
             height: 28.5rem;
             margin: auto;
+            img{
+                max-width: unset;
+            }
         }
         &__big-word{
             position: relative;
             margin-top: 10.8rem;
         }
+        &__container-big-word{
+       
+            margin-left: 0;
+        }
 
     }
     @media screen and (max-width:668px) {
+        &__container{
+            padding-top: 5.3rem;
+
+        }
         
         &__title{
             text-align: center;
