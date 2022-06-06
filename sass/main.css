@@ -38,7 +38,7 @@ html, body {
 
 .button-fix {
   position: fixed;
-  z-index: 100;
+  z-index: 1000;
   left: 4rem;
   bottom: 5rem;
   display: -webkit-box;
@@ -421,7 +421,7 @@ html, body {
     color: #777B7C;
     border-bottom: none;
   }
-  .menu__linkMobile--active span {
+  .menu__link--active span {
     color: #777B7C;
   }
 }

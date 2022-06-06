@@ -10,7 +10,6 @@ burgerBtn.addEventListener('click',e=>{
 closeMenuBtn.addEventListener('click',e=>{
     menuBlock.classList.remove('open-menu');
 })
-console.log(document.querySelectorAll('.presentation').offsetTop)
 
 const setCloseMenu=()=>{
     if(window.screen.width>668 || window.screen.width >1024){

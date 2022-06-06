@@ -162,46 +162,27 @@ $(document).ready(function(){
        
         menuLinks.each((index,link)=>{
          menuLinks.each((index,link)=>{
-            if($(window).width()>1024){
-                if($(link).hasClass('menu__linkMobile--active')){
-                    $(link).removeClass('menu__linkMobile--active');
-               }
-               if(position === $(link).data('position')){
-                   $(link).addClass('menu__linkMobile--active')
-               }
-               if($(link).data('position')===3){
-                   if(position===4 || position===5){
-                       $(link).addClass('menu__linkMobile--active')
-                   }
-               }
-               if($(link).data('position')===6){
-                   if( position===7){
-                       $(link).addClass('menu__linkMobile--active')
-                   }
-               }
-            }else{
-                if($(link).hasClass('menu__linkMobile--active')){
-                    $(link).removeClass('menu__linkMobile--active');
-               }
-               if(position === $(link).data('position')){
-                   $(link).addClass('menu__linkMobile--active')
-               }
-               if($(link).data('position')===3){
-                   if(position===4 || position===5){
-                       $(link).addClass('menu__linkMobile--active')
-                   }
-               }
-               if($(link).data('position')===6){
-                   if( position===7){
-                       $(link).addClass('menu__linkMobile--active')
-                   }
-               }
+             if($(link).hasClass('menu__link--active')){
+                 $(link).removeClass('menu__link--active');
+            }
+            if(position === $(link).data('position')){
+                $(link).addClass('menu__link--active')
+            }
+            if($(link).data('position')===3){
+                if(position===4 || position===5){
+                    $(link).addClass('menu__link--active')
+                }
+            }
+            if($(link).data('position')===6){
+                if( position===7){
+                    $(link).addClass('menu__link--active')
+                }
             }
            
          })
        
         })
-    } 
+    }
     setTimeout(
       function() 
       {
@@ -322,7 +303,7 @@ $(document).ready(function(){
     // Процесс перелистывания секций
     var sectionSettings = {
         // Скроллинг
-
+      
         scrollingSpeed: 800,
         fitToSectionDelay: 500,
         touchSensitivity: 15,
