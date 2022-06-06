@@ -1,0 +1,240 @@
+.modal-form{
+    max-width: 48.9rem;
+    min-height: 100vh;
+    overflow-y: auto;
+    padding-top: 1.6rem;
+    
+    background: #FFFFFF;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.15);
+    z-index: 1000!important;
+    position: fixed;
+    right: -350vw;
+    top: 0;
+    transition: all 1000ms ease-out;
+    
+    &__close{
+     
+        margin-left: 4rem;
+        // border:1px solid red;
+
+    }
+    &__title{
+        font-family: 'Exo 2';
+        font-style: normal;
+        font-weight: 900;
+        font-size: 3.2rem;
+        line-height: 3.2rem;
+        text-transform: uppercase;
+        color: #D6DDE0;
+        margin-bottom: 2.4rem;
+        text-align: center;
+    }
+    &__body{
+       
+    
+        height:100vh;
+        overflow-y: auto!important;
+        padding: 0 4rem;
+        // border: 1px solid red;
+        &::-webkit-scrollbar {
+            width: 1em;
+          }
+           
+          &::-webkit-scrollbar-track {
+          background: #fff;
+          }
+           
+          &::-webkit-scrollbar-thumb {
+            width: .2rem;
+            height: 5rem;
+            background: #EBEEF0;
+            border-radius: 1.0rem;
+          }
+
+    }
+    &__form{
+        max-width: 71.4rem;
+        height: 60rem;
+
+    }
+    &__item{
+        max-width: 63.7rem;
+        margin-bottom: 3rem;
+    }
+    &__label{
+        display: inline-block;
+        font-family: 'Exo 2';
+        font-style: normal;
+        font-weight: 900;
+        font-size: 1.6rem;
+        line-height: 1.6rem;
+        text-transform: uppercase;
+        color: #777B7C;
+        margin-bottom: 1.6rem;
+    }
+    &__input{
+        width: 100%;
+       input,textarea{
+           width: 100%;
+           outline: none;
+           border: none;
+           border-bottom: 2px solid #777B7C;
+           font-family: 'Exo 2';
+           font-style: normal;
+           font-weight: 400;
+           font-size: 2.2rem;
+           line-height: 2.6rem;
+           color: #777B7C;
+           padding-bottom: 1.2rem;
+       }
+       textarea{
+           min-height: 5rem;
+           overflow: hidden;
+         
+       }
+      
+    }
+    &__info{
+        display: flex;
+        gap: 1.8rem;
+        align-items: center;
+        margin-bottom: 4.7rem;
+        &-icon{
+            width: 46px;
+            height: 34px;
+            svg{
+                width: 100%;
+                height: auto;
+            }
+        }
+        &-text{
+            font-family: 'Exo 2.0';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 1.2rem;
+            line-height: 1.4rem;
+            color: #777B7C;
+        }
+    }
+    &__submit{
+        width: 18.6rem;
+        height: 4.8rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Exo 2';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+        color: #FFFFFF;
+        background: #8ADDEB;
+        border-radius: .5rem;
+        cursor: pointer;
+        border: none;
+        transition: all 300ms ease;
+        &:hover{
+            background: #fff;
+            color: #8ADDEB;
+            border: 2px solid  #8ADDEB;
+        }
+
+    }
+
+}
+
+
+::placeholder,input{
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.6re1.4rem;
+    margin-bottom: 0.8rem;
+    
+    
+    color: #777B7C;
+}
+
+.open-modal{
+    right: 0%;
+}
+
+.icon-modal{
+width: 40px;
+height: 40px;
+position: relative!important;
+transition: all 300ms ease;
+cursor: pointer;
+&:hover{
+    transform: rotate(45deg);
+    .icon-modal__row--small{
+        &-top{
+            transform: rotate(4deg);
+            left: 12px;
+            top: 3px;
+        }
+        &-bot{
+            transform: rotate(88deg);
+            top: 11px;
+            right: -2px;
+        }
+    }
+}
+&__row{
+    display: inline-block;
+    width: 40px;
+    height: 8px;
+    background: #D6DDE0;
+    border-radius: 4px;
+    position: absolute;
+   
+    &--small{
+        width: 20px;
+      &-top{
+        top: 8px;
+        left: 3px;
+        transform: rotate(45deg);
+        transition: all 600ms ease;
+      }
+      &-bot{
+        top: 22px;
+        right: 3px;
+        transform: rotate(45deg);
+        transition: all 600ms ease;
+      }
+        
+    }
+    &--long{
+        transform: rotate(-45deg);
+        top: 15px;
+
+       
+       
+    }
+}
+}
+
+@media screen and (max-width:1023px) {
+    .modal-form{
+        max-width: 63.7rem;
+    }
+}
+@media screen and (max-width:1023px) {
+    .modal-form{
+        max-width: 30rem;
+        &__close{
+            margin-bottom: 2.5rem;
+        }
+        &__title{
+            font-size: 2.4rem;
+            line-height: 2.4rem;
+            margin-bottom: 4rem;
+        }
+        &__body{
+            padding: 0 2rem;
+        }
+    }
+}
+
+

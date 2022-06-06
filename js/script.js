@@ -8,6 +8,7 @@ if ($(window).width()<1000) {
 }
 $(document).ready(function(){
     let menuLinks= $('.menu__link')
+   
     const changeColorHeader=(destination)=>{
         if(destination=== 2){
             $('.menu__link').addClass('menu__link--blue')
@@ -183,6 +184,67 @@ $(document).ready(function(){
        
         })
     }
+    const handlerWordFixed=(position)=>{
+        let bigWord=$('.big-word')
+        if(position===1){
+            bigWord.css({
+                zIndex:100,
+            })
+        }else{
+            bigWord.css({
+                zIndex:10,
+            })
+        }
+       
+        switch(position){
+            case 1:
+                bigWord.text('marketing')
+                bigWord.css({
+                    left:'86px'
+                })
+                break
+            case 2:
+                bigWord.text('')
+                break
+            case 3:
+                bigWord.text('expert')
+                bigWord.css({
+                    left:'33px'
+                })
+                break
+            case 4:
+                bigWord.text('expert')
+                bigWord.css({
+                    left:'33px'
+                })
+                break
+            case 5:
+                bigWord.text('expert')
+                bigWord.css({
+                    left:'33px'
+                })
+                break
+            case 6:
+                bigWord.text('working')
+                bigWord.css({
+                    left:'33px'
+                })
+                break
+            case 7:
+                bigWord.text('case')
+                bigWord.css({
+                    left:'33px'
+                })
+                break
+            default:
+                return true
+                break
+
+            
+        }
+    }
+
+   
     setTimeout(
       function() 
       {
@@ -301,6 +363,7 @@ $(document).ready(function(){
         $(this).css('height', obj_height + 'px');
     });
     // Процесс перелистывания секций
+    
     var sectionSettings = {
         // Скроллинг
       
@@ -308,6 +371,9 @@ $(document).ready(function(){
         fitToSectionDelay: 500,
         touchSensitivity: 15,
         lookAnchors:true,
+        scrollBar: false,
+      
+       
         //Дизай
         paddingTop:'100',
         scrollHorizontally: true,
@@ -315,6 +381,7 @@ $(document).ready(function(){
         paddingBottom:'100',
         controlArrows: false,
         verticalCentered: true,
+        
         responsiveWidth: 0,
         onLeave: function(origin, destination, direction){
           
@@ -322,6 +389,8 @@ $(document).ready(function(){
            handlerButtonFixForDesktop(destination)
            handlerButtonFixForMobile(destination)
            setActiveLink(destination)
+           // handler big word fisced on page
+        //    handlerWordFixed(destination)
             // Затухание
             $('.section[data-lenght="'+destination+'"]').animate({opacity:1}, 800);
             $('.section[data-lenght="'+origin+'"]').animate({opacity:0}, 300);
@@ -346,6 +415,8 @@ $(document).ready(function(){
             $('.background div:not(.active)').html(contentParams[destination-1]).fadeIn('500');
         },
     }
+
+    
     if ($(window).width() < 1024) {
         
         sectionSettings = {

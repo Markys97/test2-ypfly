@@ -29,7 +29,6 @@ html, body {
 
 .wrapper-section {
   position: relative;
-  z-index: 10;
 }
 
 ._container {
@@ -40,7 +39,7 @@ html, body {
   position: fixed;
   z-index: 100;
   left: 4rem;
-  bottom: 5rem;
+  bottom: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -159,8 +158,12 @@ html, body {
   font-size: 14.4018rem;
   line-height: 17.3rem;
   text-transform: uppercase;
-  color: #FFFFFF;
+  color: #fff;
   opacity: 0.1;
+  position: fixed;
+  z-index: 100 !important;
+  left: 0;
+  bottom: 0;
 }
 
 .open-menu {
@@ -213,9 +216,12 @@ html, body {
   left: 0;
   bottom: 0;
   right: 0;
+  -webkit-box-shadow: #82d6f0 -300px -300px 300px -120px inset;
+          box-shadow: #82d6f0 -300px -300px 300px -120px inset;
+  background: #83caf2;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   html, body {
     font-size: calc(0.505vw + 0.905vh - 0.17rem);
   }
@@ -238,7 +244,9 @@ html, body {
     font-size: 7rem;
     line-height: 8.4rem;
     text-transform: uppercase;
-    text-align: center;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
   }
 }
 
@@ -466,9 +474,7 @@ html, body {
 
 .presentation {
   width: 100%;
-  -webkit-box-shadow: #82d6f0 -300px -300px 300px -120px inset;
-          box-shadow: #82d6f0 -300px -300px 300px -120px inset;
-  background: #83caf2;
+  position: relative;
 }
 
 .presentation__container {
@@ -480,7 +486,6 @@ html, body {
   position: relative;
   max-width: 85.3rem;
   margin: auto;
-  z-index: 10;
 }
 
 .presentation__row {
@@ -554,7 +559,6 @@ html, body {
 
 .presentation__big-word {
   position: relative;
-  z-index: 1;
   margin-top: -11rem;
 }
 
@@ -735,8 +739,9 @@ html, body {
 }
 
 .item-cible__img img {
-  max-width: 100%;
-  height: auto;
+  height: 100%;
+  position: absolute;
+  right: 0;
 }
 
 .item-cible__head {
@@ -823,6 +828,11 @@ html, body {
 
 .expert__body {
   max-width: 64rem;
+}
+
+.expert__texts {
+  position: relative;
+  margin-top: -30rem;
 }
 
 .expert__text {
@@ -1187,7 +1197,7 @@ html, body {
 }
 
 .cooperation__container {
-  padding-top: 9.8rem;
+  padding-top: 8.8rem;
 }
 
 .cooperation__row {
@@ -1313,7 +1323,7 @@ html, body {
 }
 
 .case__container {
-  padding-top: 21.8rem;
+  padding-top: 5.8rem;
   min-width: 100%;
 }
 
@@ -1342,6 +1352,8 @@ html, body {
   -webkit-hyphens: none;
       -ms-hyphens: none;
           hyphens: none;
+  position: relative;
+  margin-top: 10rem;
 }
 
 .case__text span {
@@ -1406,6 +1418,298 @@ html, body {
   .case__text {
     font-size: 1.4rem;
     line-height: 2.0rem;
+  }
+}
+
+.modal-form {
+  max-width: 48.9rem;
+  min-height: 100vh;
+  overflow-y: auto;
+  padding-top: 1.6rem;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.15);
+  z-index: 1000 !important;
+  position: fixed;
+  right: -350vw;
+  top: 0;
+  -webkit-transition: all 1000ms ease-out;
+  transition: all 1000ms ease-out;
+}
+
+.modal-form__close {
+  margin-left: 4rem;
+}
+
+.modal-form__title {
+  font-family: 'Exo 2';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 3.2rem;
+  line-height: 3.2rem;
+  text-transform: uppercase;
+  color: #D6DDE0;
+  margin-bottom: 2.4rem;
+  text-align: center;
+}
+
+.modal-form__body {
+  height: 100vh;
+  overflow-y: auto !important;
+  padding: 0 4rem;
+}
+
+.modal-form__body::-webkit-scrollbar {
+  width: 1em;
+}
+
+.modal-form__body::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+.modal-form__body::-webkit-scrollbar-thumb {
+  width: .2rem;
+  height: 5rem;
+  background: #EBEEF0;
+  border-radius: 1.0rem;
+}
+
+.modal-form__form {
+  max-width: 71.4rem;
+  height: 60rem;
+}
+
+.modal-form__item {
+  max-width: 63.7rem;
+  margin-bottom: 3rem;
+}
+
+.modal-form__label {
+  display: inline-block;
+  font-family: 'Exo 2';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  text-transform: uppercase;
+  color: #777B7C;
+  margin-bottom: 1.6rem;
+}
+
+.modal-form__input {
+  width: 100%;
+}
+
+.modal-form__input input, .modal-form__input textarea {
+  width: 100%;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #777B7C;
+  font-family: 'Exo 2';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.2rem;
+  line-height: 2.6rem;
+  color: #777B7C;
+  padding-bottom: 1.2rem;
+}
+
+.modal-form__input textarea {
+  min-height: 5rem;
+  overflow: hidden;
+}
+
+.modal-form__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.8rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 4.7rem;
+}
+
+.modal-form__info-icon {
+  width: 46px;
+  height: 34px;
+}
+
+.modal-form__info-icon svg {
+  width: 100%;
+  height: auto;
+}
+
+.modal-form__info-text {
+  font-family: 'Exo 2.0';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  color: #777B7C;
+}
+
+.modal-form__submit {
+  width: 18.6rem;
+  height: 4.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: 'Exo 2';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  color: #FFFFFF;
+  background: #8ADDEB;
+  border-radius: .5rem;
+  cursor: pointer;
+  border: none;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+.modal-form__submit:hover {
+  background: #fff;
+  color: #8ADDEB;
+  border: 2px solid  #8ADDEB;
+}
+
+::-webkit-input-placeholder, input {
+  font-family: 'Exo 2';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.6re1 0.4rem;
+  margin-bottom: 0.8rem;
+  color: #777B7C;
+}
+
+:-ms-input-placeholder, input {
+  font-family: 'Exo 2';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.6re1 0.4rem;
+  margin-bottom: 0.8rem;
+  color: #777B7C;
+}
+
+::-ms-input-placeholder, input {
+  font-family: 'Exo 2';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.6re1 0.4rem;
+  margin-bottom: 0.8rem;
+  color: #777B7C;
+}
+
+::placeholder, input {
+  font-family: 'Exo 2';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.6re1 0.4rem;
+  margin-bottom: 0.8rem;
+  color: #777B7C;
+}
+
+.open-modal {
+  right: 0%;
+}
+
+.icon-modal {
+  width: 40px;
+  height: 40px;
+  position: relative !important;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  cursor: pointer;
+}
+
+.icon-modal:hover {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.icon-modal:hover .icon-modal__row--small-top {
+  -webkit-transform: rotate(4deg);
+          transform: rotate(4deg);
+  left: 12px;
+  top: 3px;
+}
+
+.icon-modal:hover .icon-modal__row--small-bot {
+  -webkit-transform: rotate(88deg);
+          transform: rotate(88deg);
+  top: 11px;
+  right: -2px;
+}
+
+.icon-modal__row {
+  display: inline-block;
+  width: 40px;
+  height: 8px;
+  background: #D6DDE0;
+  border-radius: 4px;
+  position: absolute;
+}
+
+.icon-modal__row--small {
+  width: 20px;
+}
+
+.icon-modal__row--small-top {
+  top: 8px;
+  left: 3px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition: all 600ms ease;
+  transition: all 600ms ease;
+}
+
+.icon-modal__row--small-bot {
+  top: 22px;
+  right: 3px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition: all 600ms ease;
+  transition: all 600ms ease;
+}
+
+.icon-modal__row--long {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  top: 15px;
+}
+
+@media screen and (max-width: 1023px) {
+  .modal-form {
+    max-width: 63.7rem;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .modal-form {
+    max-width: 30rem;
+  }
+  .modal-form__close {
+    margin-bottom: 2.5rem;
+  }
+  .modal-form__title {
+    font-size: 2.4rem;
+    line-height: 2.4rem;
+    margin-bottom: 4rem;
+  }
+  .modal-form__body {
+    padding: 0 2rem;
   }
 }
 /*# sourceMappingURL=main.css.map */

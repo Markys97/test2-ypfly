@@ -82,7 +82,7 @@
                 </div>
             </div>
         </header>
-        <a href="#" class="button-fix">
+        <a href="#" class="button-fix openModalButton">
             <span class="button-fix__text">Связаться с нами</span>
             <svg  class="button-fix__img" width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle class="button-fix__circle" cx="28" cy="28" r="28" fill="white"/>
@@ -93,10 +93,13 @@
             </svg>
                 
         </a>
-        <div class="background"></div>
+        <div class="background">
+            <div class="text big-word ">Marketing</div>
+            <div class="text big-word"></div>
+        </div>
         <div class="wrapper-section" id="sections">
             <!-- presentation -->
-            <section class="presentation section section-block "data-anchor="section_1"  data-text="marketing" data-params="#83CAF2;#82D6F0;-300px;-300px;-120px">
+            <section class="presentation section section-block  "data-anchor="section_1"  data-text="marketing" data-params="#83CAF2;#82D6F0;-300px;-300px;-120px">
                 <div class="presentation__container _container">
                     <div class="presentation__content">
                         <div class="presentation__row">
@@ -110,21 +113,19 @@
                                 <p class="presentation__text text">
                                     Предоставим лиды в среднем на 27% дешевле чем получают ваши конкуренты
                                 </p>
-                                <a href="#" class="presentation__btn ">
+                                <a href="#" class="presentation__btn openModalButton">
                                     Получить консультацию
                                 </a>
                             </div>
                         </div>
-                        <div class="presentation__big-word big-word">
-                            marketing
-                        </div>
+                       
                     </div>
                     
                 </div>
                 
             </section>
              <!-- cible -->
-            <section class="cible section section-block "data-anchor="section_2"  data-text="experience" data-params="#fff;#fff;-300px;-300px;-120px">
+            <section class="cible section section-block "data-anchor="section_2"  data-text="" data-params="#fff;#fff;-300px;-300px;-120px">
                 <div class="cible__container _container">
                     <h2 class="cible__title title title--black">Для кого наша экспертиза</h2>
                     <div class="cible__container-row">
@@ -220,18 +221,14 @@
                                      Мы так же являемся сертифицированными партнерами <span class="expert__text-important">1С Битрикс</span>,
                                       что подтверждает высокую компетенцию в разработке сайтов.
                                 </p>
-                                <div class="expert__big-word big-word">
-                                    experts
-                                </div>
+                               
                             </div>
                         </div>
                         <div class="expert__img">
                             <img src="./img/yandex.png" alt=" yandex logo illustration">
                         </div>
                     </div>
-                    <div class="expert__big-word-mobile big-word">
-                        experts
-                    </div>
+                   
                 </div>
             </section>
             <!-- together foever -->
@@ -260,9 +257,7 @@
                         </div>
                     </div>
                     <div class="forever__container-big-word ">
-                        <div class="forever__big-word big-word">
-                            experts
-                        </div>
+                        
                     </div>
                 </div>
             </section>
@@ -286,11 +281,7 @@
                             <img src="./img/ordi2.png" alt=" ordinator picture illustration">
                         </div>
                     </div>
-                    <div class="road__container-big-word">
-                        <div class="road__big-word big-word">
-                            experts
-                        </div>
-                    </div>
+                   
                 </div>
             </section>
             <!-- cooperation -->
@@ -322,11 +313,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="cooperation__container-big-word">
-                        <div class="cooperation__big-word big-word">
-                            working
-                        </div>
-                    </div>
+                    
                 </div>
             </section>
              <!-- cases -->
@@ -346,13 +333,51 @@
                             <img src="./img/phone.png" alt="phone picture illustration">
                         </div>
                     </div>
-                    <div class="case__containner-big-word big-word"> 
-                        <div class="case__big-word">
-                            cases
-                        </div>
-                    </div>
+                  
                 </div>
             </section>
+        </div>
+        <div class="modal-form">
+            <div class="modal-form__close icon-modal">
+                    <span class="icon-modal__row icon-modal__row--small icon-modal__row--small-top"></span>
+                    <span class="icon-modal__row icon-modal__row--long "></span>
+                    <span class="icon-modal__row icon-modal__row--small icon-modal__row--small-bot"></span>
+            </div>
+            <div class="modal-form__body">
+                <h2 class="modal-form__title">связаться с нами</h2>
+                <form action="#" class="modal-form__form " autocomplete="off">
+                    <div class="modal-form__item">
+                        <label for="fio" class="modal-form__label">ФИО*</label>
+                        <p class="modal-form__input">
+                            <input type="text" name="name" id="fio" placeholder="Александров Александр Александрович" required>
+                        </p>
+                    </div>
+                    <div class="modal-form__item">
+                        <label for="phone" class="modal-form__label">Телефон*</label>
+                        <p class="modal-form__input">
+                            <input type="tel" name="phone" id="phone" placeholder="+7 920 000 00 00" required>
+                        </p>
+                    </div>
+                    <div class="modal-form__item">
+                        <label for="comment" class="modal-form__label">Комментарий</label>
+                        <p class="modal-form__input">
+                       <textarea name="comment" id="comment"  >
+                      
+                       </textarea>
+                        </p>
+                    </div>
+                    <div class="modal-form__info">
+                        <div class="modal-form__info-icon">
+                            <svg width="46" height="34" viewBox="0 0 46 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path opacity="0.2" d="M45.3263 0.678049C44.4282 -0.226016 42.972 -0.226016 42.0736 0.678049L14.5182 28.4119L3.92639 17.7516C3.02822 16.8475 1.57204 16.8476 0.673693 17.7516C-0.224564 18.6556 -0.224564 20.1212 0.673693 21.0252L12.8919 33.3223C13.7898 34.2262 15.2471 34.2256 16.1446 33.3223L45.3263 3.95178C46.2246 3.04781 46.2245 1.58212 45.3263 0.678049Z" fill="#777B7C"/>
+                            </svg>
+                        </div>
+                        <span class="modal-form__info-text">Отправляя форму, вы даете согласие на обработку персональных данных</span>
+                    </div>
+                    <button class="modal-form__submit" type="submit">Отправить</button>
+                </form>
+            </div>
+          
         </div>
        
     </div>

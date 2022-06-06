@@ -17,6 +17,10 @@
          max-width: 64rem;
         //  border:1px solid white;
      }
+     &__texts{
+        position: relative;
+        margin-top: -30rem;
+     }
      &__text{
         font-family: 'Exo 2';
         font-style: normal;

@@ -5,6 +5,7 @@ html,body{
 }
 .section{
     position: relative;
+   
 }
 .wrapper{
     overflow: hidden;
@@ -12,7 +13,7 @@ html,body{
 }
 .wrapper-section{
     position: relative;
-    z-index: 10;
+   
 }
 ._container{
     padding: 0 4rem;
@@ -22,7 +23,7 @@ html,body{
     position: fixed;
     z-index: 100;
     left: 4rem;
-    bottom: 5rem;
+    bottom: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -129,8 +130,13 @@ html,body{
     font-size: 14.4018rem;
     line-height: 17.3rem;
     text-transform: uppercase;
-    color: #FFFFFF;
+    color: #fff;
     opacity: 0.1;
+    position: fixed;
+    z-index: 100!important;
+    left: 0;
+    bottom:0;
+
 }
 
 .section-block{
@@ -188,6 +194,8 @@ html,body{
     left: 0;
     bottom: 0;
     right: 0;
+    box-shadow: rgb(130, 214, 240) -300px -300px 300px -120px inset; 
+    background: rgb(131, 202, 242);
     
 }
 
@@ -203,7 +211,7 @@ html,body{
 
 
 
-@media screen and (max-width:1024px) {
+@media screen and (max-width:1023px) {
     html,body{
         font-size: calc(0.505vw + 0.905vh - 0.17rem);
 
@@ -237,7 +245,8 @@ html,body{
         font-size: 7rem;
         line-height: 8.4rem;
         text-transform: uppercase;
-        text-align: center;
+       left: 50%;
+       transform: translateX(-50%);
     }
     
     

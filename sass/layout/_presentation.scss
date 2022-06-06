@@ -1,8 +1,9 @@
 .presentation{
     width: 100%;
     
-    box-shadow: rgb(130, 214, 240) -300px -300px 300px -120px inset; 
-    background: rgb(131, 202, 242);
+    
+    position: relative;
+   
     &__container{
       min-height: 100%;
         padding-top:15.6rem ;
@@ -11,7 +12,7 @@
         position: relative;
         max-width: 85.3rem;
         margin: auto;
-        z-index: 10;
+        // z-index: 10;
     }
     &__row{
         display: flex;
@@ -70,7 +71,7 @@
     }
     &__big-word{
         position: relative;
-        z-index: 1;
+    
         margin-top: -11rem;
     }
 

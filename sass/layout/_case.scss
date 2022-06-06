@@ -3,7 +3,7 @@
     // background: linear-gradient(257.56deg, rgba(90, 210, 218, 0.87) 22.53%, rgba(116, 232, 232, 0.87) 69.82%),
     //  linear-gradient(251.72deg, #F8DD97 15.55%, #F3CA7A 78.16%);
     &__container{
-        padding-top: 21.8rem;
+        padding-top: 5.8rem;
         // background: url(../img/phone.png) ;
         // background-repeat: no-repeat;
         // background-position:  right ;
@@ -29,6 +29,8 @@
         color: #FFFFFF;
         margin-bottom: 0.4rem;
         hyphens: none;
+        position: relative;
+        margin-top: 10rem;
         span{
             color: #1FA39D;
         }

@@ -3,14 +3,21 @@ let menuBlock= document.querySelector('.menu');
 let closeMenuBtn= document.querySelector('.menu__close-btn')
 let menuLinks= document.querySelectorAll('.menu__link')
 let textLinks=  document.querySelectorAll('.menu__link span')
-
+let closeModalButton=  document.querySelector('.modal-form__close');
+let modalBlock=  document.querySelector('.modal-form');
+let openModalButtons=document.querySelectorAll('.openModalButton')
+ 
+// open menu on mobile screen
 burgerBtn.addEventListener('click',e=>{
     menuBlock.classList.add('open-menu');
 })
+
+// close menu on mobile screen
 closeMenuBtn.addEventListener('click',e=>{
     menuBlock.classList.remove('open-menu');
 })
 
+// close menu function
 const setCloseMenu=()=>{
     if(window.screen.width>668 || window.screen.width >1024){
         if(menuBlock.classList.contains('open-menu')){
@@ -19,6 +26,7 @@ const setCloseMenu=()=>{
     }
 }
 
+// set active menu link
 menuLinks.forEach((link,index,links)=>{
     link.addEventListener('click',e=>{
         menuBlock.classList.remove('open-menu');
@@ -33,14 +41,21 @@ menuLinks.forEach((link,index,links)=>{
     })
 })
 
+// close mobile menu  when resizing screen on desktop
 window.addEventListener('resize',setCloseMenu)
 setCloseMenu()
 
-// change color menu cible logic
+// handler modal form
 
-// let url= window.location.href;
-// let locationSectionActive= url.slice(-9)
-
-
-
+closeModalButton.addEventListener('click',e=>{
+    modalBlock.classList.remove('open-modal')
+   
+})
+openModalButtons.forEach(openModalButton=>{
+    openModalButton.addEventListener('click',e=>{
+        modalBlock.classList.add('open-modal')
+       
+    })
+    
+})
 
