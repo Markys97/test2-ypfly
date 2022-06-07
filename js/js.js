@@ -8,7 +8,11 @@ let modalBlock=  document.querySelector('.modal-form');
 let openModalButtons=document.querySelectorAll('.openModalButton')
 let wrapperSection= document.querySelector('.wrapper-section')
 let header= document.querySelector('.header')
- 
+let phoneNumberText= document.querySelector('.tel__link')
+let btnFixed= document.querySelector('.button-fix')
+let buttonPresentation=document.querySelector('.presentation__btn')
+let bodyElt= document.querySelector('body');
+console.log(closeModalButton)
 // open menu on mobile screen
 burgerBtn.addEventListener('click',e=>{
     menuBlock.classList.add('open-menu');
@@ -51,19 +55,32 @@ setCloseMenu()
 
 closeModalButton.addEventListener('click',e=>{
     modalBlock.classList.remove('open-modal')
-    wrapperSection.classList.remove('sombre')
-    header.classList.remove('sombre')
-
+  
+    // textLinks.forEach(text=> text.classList.remove('sombre-text'))
+    // phoneNumberText.classList.remove('sombre-text')
+    // btnFixed.style.opacity=1
+    // buttonPresentation.style.zIndex=100
+    
+    bodyElt.classList.remove('body')
+    
    
 })
 openModalButtons.forEach(openModalButton=>{
     openModalButton.addEventListener('click',e=>{
+       e.stopPropagation()
         modalBlock.classList.add('open-modal')
-        wrapperSection.classList.add('sombre')
-        header.classList.add('sombre')
-
+        // wrapperSection.classList.add('sombre')
+        // textLinks.forEach(text=> text.classList.add('sombre-text'))
+        // phoneNumberText.classList.add('sombre-text')
+        // btnFixed.style.opacity=0.2
+        // buttonPresentation.style.zIndex=-100
+        bodyElt.classList.add('body');
+        let path= e.path;
+        console.log(path)
+        
        
     })
     
 })
+
 

@@ -108,6 +108,9 @@
       
      
     }
+    &__container-row{
+        width: 100%;
+    }
     &__text{
         font-family: 'Exo 2';
         font-style: normal;
@@ -122,10 +125,11 @@
     }
 }
 
-@media screen and (max-width:1024px) {
+@media screen and (max-width:1023px) {
     .cible{
        
         &__container-row {
+            width: 100%;
             overflow-x: auto;
            scrollbar-width: none;
            // touch-action: pan-x;
@@ -142,12 +146,13 @@
             width: auto;
             max-width: none;
             padding: 0 4rem;
+            gap: 5.6rem;
         }
        
 
     }
 }
-@media screen and (max-width:668px) {
+@media screen and (max-width:667px) {
     .cible{
         &__title{
             max-width: 35.4rem;

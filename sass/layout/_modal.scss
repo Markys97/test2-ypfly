@@ -1,16 +1,31 @@
 .modal-form{
     max-width: 48.9rem;
-    min-height: 100vh;
+    height: 100vh;
     overflow-y: auto;
     padding-top: 1.6rem;
-    
+   
     background: #FFFFFF;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.15);
-    z-index: 1000!important;
+    z-index: 10000!important;
     position: fixed;
     right: -350vw;
     top: 0;
-    transition: all 1000ms ease-out;
+    transition: all 500ms ease-out;
+    &::-webkit-scrollbar {
+        width: 1em;
+      }
+       
+      &::-webkit-scrollbar-track {
+      background: #fff;
+      }
+       
+      &::-webkit-scrollbar-thumb {
+        width: .2rem;
+        height: 5rem;
+        background: #EBEEF0;
+        border-radius: 1.0rem;
+      }
+      
     
     &__close{
      
@@ -33,23 +48,12 @@
        
     
         height:100vh;
-        overflow-y: auto!important;
+        // overflow-y: auto!important;
+     
         padding: 0 4rem;
         // border: 1px solid red;
-        &::-webkit-scrollbar {
-            width: 1em;
-          }
-           
-          &::-webkit-scrollbar-track {
-          background: #fff;
-          }
-           
-          &::-webkit-scrollbar-thumb {
-            width: .2rem;
-            height: 5rem;
-            background: #EBEEF0;
-            border-radius: 1.0rem;
-          }
+        
+       
 
     }
     &__form{
@@ -69,27 +73,33 @@
         font-size: 1.6rem;
         line-height: 1.6rem;
         text-transform: uppercase;
-        color: #777B7C;
+       
+        color: #D6DDE0;
         margin-bottom: 1.6rem;
+        transition: color 300ms ease-in-out;
     }
     &__input{
         width: 100%;
        input,textarea{
+           transition: all 300ms ease-in-out;
            width: 100%;
            outline: none;
            border: none;
-           border-bottom: 2px solid #777B7C;
+           border-bottom:0.1rem solid #D6DDE0;
            font-family: 'Exo 2';
            font-style: normal;
            font-weight: 400;
-           font-size: 2.2rem;
-           line-height: 2.6rem;
+           font-size: 1.4rem;
+           line-height: 1.6rem;
            color: #777B7C;
            padding-bottom: 1.2rem;
        }
        textarea{
-           min-height: 5rem;
-           overflow: hidden;
+        -webkit-appearance: none;
+        resize: none;
+        overflow: hidden;
+       
+        
          
        }
       
@@ -136,7 +146,7 @@
         &:hover{
             background: #fff;
             color: #8ADDEB;
-            border: 2px solid  #8ADDEB;
+            border: 0.2rem solid  #8ADDEB;
         }
 
     }
@@ -144,12 +154,14 @@
 }
 
 
+
+
 ::placeholder,input{
     font-family: 'Exo 2';
     font-style: normal;
     font-weight: 400;
     font-size: 1.4rem;
-    line-height: 1.6re1.4rem;
+    line-height: 1.6rem;
     margin-bottom: 0.8rem;
     
     
@@ -214,13 +226,33 @@ cursor: pointer;
     }
 }
 }
+#comment_div{
+    border-bottom: 2px solid #777B7C;
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    color: #777B7C;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    position: absolute;
+    left: -2000%;
+    max-width: 40.3rem;
 
+}
+.label-active{
+    color: #777B7C;
+}
+.input-active{
+    border-bottom:0.2rem solid #777B7C!important;
+}
 @media screen and (max-width:1023px) {
     .modal-form{
         max-width: 63.7rem;
     }
 }
-@media screen and (max-width:1023px) {
+@media screen and (max-width:667px) {
     .modal-form{
         max-width: 30rem;
         &__close{
@@ -235,6 +267,13 @@ cursor: pointer;
             padding: 0 2rem;
         }
     }
+    ::placeholder,input,textarea,#comment_div{
+       
+        font-size: 1.2rem;
+       
+     
+    }
+    
 }
 
 

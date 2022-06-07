@@ -185,7 +185,8 @@ $(document).ready(function(){
         })
     }
 
-
+    // Изменение textarea
+ 
    
     setTimeout(
       function() 
@@ -356,22 +357,57 @@ $(document).ready(function(){
         },
     }
     
-    $('.modal-form').click(()=>{
+    $(document).on('input', ' textarea', function(event) {
+        $('.scroll_block').animate({
+            scrollTop: $(".scroll_block .text").offset().top
+        }, 0);
+        var min_line_height = 40;
+        if ($(window).width()) {
+            min_line_height = 26;    
+        }
        
+        $('#comment_div').html($(this).val());
+        var obj_height = $('#comment_div')[0].offsetHeight+12;
+        if ($(window).width()) {
+            obj_height = $('#comment_div')[0].offsetHeight+6;
+        }
+        if (event.keyCode == 13) obj_height += min_line_height;
+        else if (obj_height < min_line_height) obj_height = min_line_height;
+        $(this).css('height', obj_height + 'px');
+    });
+     // Изменение color label
+    $('input,textarea').each((index,el)=>{
+       $(el).focus(()=>{
+            $('label').each((indexLabel,labelElt)=>{
+                if($(labelElt).data('bind')=== $(el).data('bind')){
+                    $(labelElt).addClass('label-active')
+                    $(el).addClass('input-active')
+                  
+                }
+            })
+       })
+       $(el).blur(()=>{
+            $('label').each((indexLabel,labelElt)=>{
+                if($(labelElt).data('bind')=== $(el).data('bind')){
+                    $(labelElt).removeClass('label-active')
+                    $(el).removeClass('input-active')
+                }
+            })
+       })
     })
+ 
     
     if ($(window).width() < 1024) {
         
         sectionSettings = {
             // Скроллинг
             scrollingSpeed: 800,
-          
             fitToSectionDelay: 500,
             touchSensitivity: 15,
             //Дизайн
             paddingTop:'90px',
             scrollHorizontally: true,
-            normalScrollElements: '.modal_block',
+            normalScrollElements: '.modal-form, .cible__container-row',
             paddingBottom:'80px',
             controlArrows: false,
             verticalCentered: true,
@@ -454,10 +490,11 @@ $(document).ready(function(){
             touchSensitivity: 15,
             fitToSection:false,
             autoScrolling:false,
+            normalScrollElements: '.modal-form, .cible__container-row',
             //Дизайн
             // paddingTop:'0px',
             scrollHorizontally: true,
-            normalScrollElements: '.modal_block',
+            
             paddingBottom:'0px',
             controlArrows: false,
             bigSectionsDestination:'top',

@@ -22,15 +22,17 @@
                     <span class="burger__row burger__row--small"></span>
                     <span class="burger__row"></span>
                 </div>
+                
                 <div class="header__tel tel">
                     <a class="tel__link "  href="tel:+78314239533">+7 831 423 95 33</a>
                 </div>
                 <nav class="header__menu menu">
                     <div class="menu__close-btn">
-                        <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="39.7039" height="7.94079" rx="3.97039" transform="matrix(0.706524 0.707689 -0.706524 0.707689 5.94727 0.282227)" fill="#D6DDE0"/>
-                            <rect width="39.7039" height="7.94079" rx="3.97039" transform="matrix(0.706524 -0.707689 0.706524 0.707689 0 28.0981)" fill="#D6DDE0"/>
-                        </svg>
+                        <div class=" icon-modal">
+                            <span class="icon-modal__row icon-modal__row--small icon-modal__row--small-top"></span>
+                            <span class="icon-modal__row icon-modal__row--long "></span>
+                            <span class="icon-modal__row icon-modal__row--small icon-modal__row--small-bot"></span>
+                        </div>
                     </div>
                     <ul class="menu__list">
                         <li class="menu__item">
@@ -122,7 +124,7 @@
                     </div>
                     
                 </div>
-                
+                <div class="text big-word big-word--mobile ">Marketing</div>
             </section>
              <!-- cible -->
             <section class="cible section section-block "data-anchor="section_2"  data-text="" data-params="#fff;#fff;-300px;-300px;-120px">
@@ -205,6 +207,7 @@
                         </div>
                     </div>
                 </div>
+               
             </section>
             <!-- expert -->
             <section class=" expert section section-block "data-anchor="section_3"   data-text="experts" data-params="#FFA16E;#FFBD80;-300px;-300px;-120px">
@@ -230,6 +233,7 @@
                     </div>
                    
                 </div>
+                <div class="text big-word big-word--mobile ">expert</div>
             </section>
             <!-- together foever -->
             <section class="forever section section-block "data-anchor="section_4"   data-text="experts" data-params="#CD96EE;#C9B0F2;-300px;-300px;-120px">
@@ -260,9 +264,10 @@
                         
                     </div>
                 </div>
+                <div class="text big-word big-word--mobile ">expert</div>
             </section>
             <!-- Road with clear markings -->
-            <section class="road section section-block "data-anchor="section_5"   data-text="experts" data-params="#F8DD97;#F3CA7A;-300px;-300px;-120px">
+            <section class="road section section-block "data-anchor="section_5"   data-text="digital" data-params="#F8DD97;#F3CA7A;-300px;-300px;-120px">
                 <div class="road__container _container">
                     <div class="road__top top">
                         Основная цель правильной клиники – вызвать доверие у пациента.
@@ -283,6 +288,7 @@
                     </div>
                    
                 </div>
+                <div class="text big-word big-word--mobile ">digital</div>
             </section>
             <!-- cooperation -->
             <section class="cooperation section section-block "data-anchor="section_6"   data-text="working" data-params="#F0B3A5;#F5A693;-300px;-300px;-120px">
@@ -315,6 +321,8 @@
                     </div>
                     
                 </div>
+
+                <div class="text big-word big-word--mobile ">working</div>
             </section>
              <!-- cases -->
             <section class="case section section-block "data-anchor="section_7"  data-text="cases" data-params="#4BD6C5;#79DFCD;-300px;-300px;-120px">
@@ -335,6 +343,8 @@
                     </div>
                   
                 </div>
+
+                <div class="text big-word big-word--mobile ">cases</div>
             </section>
         </div>
         <div class="modal-form">
@@ -343,28 +353,29 @@
                     <span class="icon-modal__row icon-modal__row--long "></span>
                     <span class="icon-modal__row icon-modal__row--small icon-modal__row--small-bot"></span>
             </div>
-            <div class="modal-form__body">
+            <div class="modal-form__body scroll_block">
                 <h2 class="modal-form__title">связаться с нами</h2>
                 <form action="#" class="modal-form__form " autocomplete="off">
                     <div class="modal-form__item">
-                        <label for="fio" class="modal-form__label">ФИО*</label>
+                        <label for="fio" class="modal-form__label" data-bind="1">ФИО*</label>
                         <p class="modal-form__input">
-                            <input type="text" name="name" id="fio" placeholder="Александров Александр Александрович" required>
+                            <input type="text" name="name" data-bind="1" id="fio" placeholder="Александров Александр Александрович" required>
                         </p>
                     </div>
                     <div class="modal-form__item">
-                        <label for="phone" class="modal-form__label">Телефон*</label>
+                        <label for="phone" class="modal-form__label"  data-bind="2">Телефон*</label>
                         <p class="modal-form__input">
-                            <input type="tel" name="phone" id="phone" placeholder="+7 920 000 00 00" required>
+                            <input type="tel" name="phone" id="phone"  data-bind="2" placeholder="+7 920 000 00 00" required>
                         </p>
                     </div>
-                    <div class="modal-form__item">
-                        <label for="comment" class="modal-form__label">Комментарий</label>
+                    <div class="modal-form__item textarea-block">
+                        <label for="comment" class="modal-form__label"  data-bind="3">Комментарий</label>
                         <p class="modal-form__input">
-                       <textarea name="comment" id="comment"  >
-                      
-                       </textarea>
+                            <textarea class="input" name="comment" id="comment"  data-bind="3"  >
+                            
+                            </textarea>
                         </p>
+                        <div id="comment_div"></div>
                     </div>
                     <div class="modal-form__info">
                         <div class="modal-form__info-icon">
@@ -372,7 +383,7 @@
                                 <path opacity="0.2" d="M45.3263 0.678049C44.4282 -0.226016 42.972 -0.226016 42.0736 0.678049L14.5182 28.4119L3.92639 17.7516C3.02822 16.8475 1.57204 16.8476 0.673693 17.7516C-0.224564 18.6556 -0.224564 20.1212 0.673693 21.0252L12.8919 33.3223C13.7898 34.2262 15.2471 34.2256 16.1446 33.3223L45.3263 3.95178C46.2246 3.04781 46.2245 1.58212 45.3263 0.678049Z" fill="#777B7C"/>
                             </svg>
                         </div>
-                        <span class="modal-form__info-text">Отправляя форму, вы даете согласие на обработку персональных данных</span>
+                        <span class="modal-form__info-text text">Отправляя форму, вы даете согласие на обработку персональных данных</span>
                     </div>
                     <button class="modal-form__submit" type="submit">Отправить</button>
                 </form>
@@ -392,36 +403,4 @@
 
 
 
-<!-- 
-      <div class="cible__container _container">
-                    <h2 class="cible__title title title--black">Для кого наша экспертиза</h2>
-                  <div class="cible__container-row">
-                    <div class="cible__row">
-                        <div class="cible__item item-cible">
-                            <h3 class="item-cible__title">Для <br>    стоматологии</h3>
-                            <div class="item-cible__img">
-                                <img src="./img/стоматология 1.png" alt=" tooth picture illustration">
-                            </div>
-                        </div>
-                        <div class="cible-cible__item item-cible">
-                            <p class="item-cible__text">
-                                Проанализируем спрос на ту или иную косметологическую услугу и активность конкурентов по каждой из них.
-                            </p>
-                            <p class="item-cible__text">
-                                Статус официального партнера Яндекса позволяет нам получить много полезной информации недоступной для обычных агентств.
-                            </p>
-                            <p class="item-cible__text">
-                                Мы знаем как создать наиболее привлекательное предложение для вашего потенциального клиента по таким направлениям как эстетическая,
-                                 врачебная косметология и другим наиболее приоритетным для вашей клиники.
-                            </p>
-                        </div>
-                        <div class="cible__item item-cible">
-                            <h3 class="item-cible__title">Для многопрофильных клиник</h3>
-                            <div class="item-cible__img">
-                                <img src="./img/стоматология 2.png" alt=" medical staf picture illustration">
-                            </div>
-                        </div>
-                    </div>
-                  </div>
-                </div>
- -->
+

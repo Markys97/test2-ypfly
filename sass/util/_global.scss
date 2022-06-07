@@ -1,10 +1,26 @@
 html,body{
     font-size: calc(0.605vw + 0.705vh - 0rem);
+   
     
-    
+}
+.body{
+    &::after{
+        content: '';
+        display: block;
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        background: #000;
+        z-index: 1000!important;
+        opacity: .5;
+    }
 }
 .section{
     position: relative;
+    
+   
    
 }
 .wrapper{
@@ -18,10 +34,25 @@ html,body{
    
 }
 .sombre{
-    opacity: 0.3!important;
     transition: all 1000ms ease-out;
-    
+    &::after{
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        opacity: .5;
+        background: #000;
+    }
 }
+.sombre-text{
+    
+    opacity: .5;
+    color: black;
+}
+
 
 ._container{
     padding: 0 4rem;
@@ -29,7 +60,7 @@ html,body{
 }
 .button-fix{
     position: fixed;
-    z-index: 100;
+    z-index: 1;
     left: 4rem;
     bottom: 1rem;
     display: flex;
@@ -50,8 +81,15 @@ html,body{
     }
 }
 
+input,textarea{
+    &:hover{
+        cursor: pointer;
+    }
+}
+
 .tel{
     &__link{
+       
         font-family: 'Exo 2';
         font-style: normal;
         font-weight: 700;
@@ -205,7 +243,9 @@ html,body{
     box-shadow: rgb(130, 214, 240) -300px -300px 300px -120px inset; 
     background: rgb(131, 202, 242);
     
+
 }
+
 
 
 
@@ -255,6 +295,12 @@ html,body{
         text-transform: uppercase;
        left: 50%;
        transform: translateX(-50%);
+       &--mobile{
+        display: none!important;
+        
+      
+       
+    }
     }
     
     
@@ -262,7 +308,7 @@ html,body{
 
 
 
-@media screen and (max-width:668px) {
+@media screen and (max-width:667px) {
     html,body{
         font-size: 10px;
     }
@@ -287,10 +333,17 @@ html,body{
       
         font-size: 5.0rem;
         line-height: 6.0rem;
-        text-transform: uppercase;
-        text-align: center;
-        margin-bottom: -3rem;
-        
+        // text-transform: uppercase;
+        // text-align: center;
+        // margin-bottom: -3rem;
+        display: none!important;
+        &--mobile{
+            display: block!important;
+            position: relative;
+            text-align: center;
+          
+           
+        }
     }
     .background{
         min-height: 100vh;
