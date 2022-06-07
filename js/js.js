@@ -6,6 +6,8 @@ let textLinks=  document.querySelectorAll('.menu__link span')
 let closeModalButton=  document.querySelector('.modal-form__close');
 let modalBlock=  document.querySelector('.modal-form');
 let openModalButtons=document.querySelectorAll('.openModalButton')
+let wrapperSection= document.querySelector('.wrapper-section')
+let header= document.querySelector('.header')
  
 // open menu on mobile screen
 burgerBtn.addEventListener('click',e=>{
@@ -49,11 +51,17 @@ setCloseMenu()
 
 closeModalButton.addEventListener('click',e=>{
     modalBlock.classList.remove('open-modal')
+    wrapperSection.classList.remove('sombre')
+    header.classList.remove('sombre')
+
    
 })
 openModalButtons.forEach(openModalButton=>{
     openModalButton.addEventListener('click',e=>{
         modalBlock.classList.add('open-modal')
+        wrapperSection.classList.add('sombre')
+        header.classList.add('sombre')
+
        
     })
     

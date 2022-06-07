@@ -31,6 +31,12 @@ html, body {
   position: relative;
 }
 
+.sombre {
+  opacity: 0.3 !important;
+  -webkit-transition: all 1000ms ease-out;
+  transition: all 1000ms ease-out;
+}
+
 ._container {
   padding: 0 4rem;
 }
@@ -896,6 +902,9 @@ html, body {
     max-width: 52.1rem;
     margin: auto;
     margin-bottom: 8.2rem;
+  }
+  .expert__texts {
+    margin-top: 0;
   }
   .expert__text {
     font-size: 1.4rem;

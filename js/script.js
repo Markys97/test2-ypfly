@@ -184,65 +184,7 @@ $(document).ready(function(){
        
         })
     }
-    const handlerWordFixed=(position)=>{
-        let bigWord=$('.big-word')
-        if(position===1){
-            bigWord.css({
-                zIndex:100,
-            })
-        }else{
-            bigWord.css({
-                zIndex:10,
-            })
-        }
-       
-        switch(position){
-            case 1:
-                bigWord.text('marketing')
-                bigWord.css({
-                    left:'86px'
-                })
-                break
-            case 2:
-                bigWord.text('')
-                break
-            case 3:
-                bigWord.text('expert')
-                bigWord.css({
-                    left:'33px'
-                })
-                break
-            case 4:
-                bigWord.text('expert')
-                bigWord.css({
-                    left:'33px'
-                })
-                break
-            case 5:
-                bigWord.text('expert')
-                bigWord.css({
-                    left:'33px'
-                })
-                break
-            case 6:
-                bigWord.text('working')
-                bigWord.css({
-                    left:'33px'
-                })
-                break
-            case 7:
-                bigWord.text('case')
-                bigWord.css({
-                    left:'33px'
-                })
-                break
-            default:
-                return true
-                break
 
-            
-        }
-    }
 
    
     setTimeout(
@@ -291,7 +233,7 @@ $(document).ready(function(){
             });
         }
         $($(click).attr('href')).addClass('active');
-        $.fn.fullpage.setAllowScrolling(false);
+     
     });
     // Закрытие модальных блоков
     $('.modal_block .close').click(function(event) {
@@ -371,13 +313,11 @@ $(document).ready(function(){
         fitToSectionDelay: 500,
         touchSensitivity: 15,
         lookAnchors:true,
-        scrollBar: false,
-      
        
         //Дизай
         paddingTop:'100',
         scrollHorizontally: true,
-        normalScrollElements: '.modal_block',
+        normalScrollElements: '.modal-form',
         paddingBottom:'100',
         controlArrows: false,
         verticalCentered: true,
@@ -415,7 +355,10 @@ $(document).ready(function(){
             $('.background div:not(.active)').html(contentParams[destination-1]).fadeIn('500');
         },
     }
-
+    
+    $('.modal-form').click(()=>{
+       
+    })
     
     if ($(window).width() < 1024) {
         

@@ -10,11 +10,19 @@ html,body{
 .wrapper{
     overflow: hidden;
     position: relative;
+   
 }
 .wrapper-section{
     position: relative;
+
    
 }
+.sombre{
+    opacity: 0.3!important;
+    transition: all 1000ms ease-out;
+    
+}
+
 ._container{
     padding: 0 4rem;
     // border:1px solid red;
