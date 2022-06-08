@@ -11,6 +11,7 @@
     &__burger{
         display: none;
     }
+   
 }
 
 .menu{
@@ -31,7 +32,7 @@
 
     }
     &__item:not(:first-child){
-        margin-left: 20px;
+        margin-left: 2.0rem;
     }
     &__link{
         &--blue{
@@ -85,7 +86,7 @@
 }
 
 
-@media screen and (max-width:1023px) {
+@media screen and (max-width:1024px) {
     .header{
        
         &__burger{
@@ -154,7 +155,7 @@
     }
     .menu{
         
-        width: 30rem;
+        max-width: 93%;
         padding-left: 2.1rem;
         &__close-btn{
             display: flex;

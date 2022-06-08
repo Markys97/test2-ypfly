@@ -360,20 +360,22 @@
                         <label for="fio" class="modal-form__label" data-bind="1">ФИО*</label>
                         <p class="modal-form__input">
                             <input type="text" name="name" data-bind="1" id="fio" placeholder="Александров Александр Александрович" required>
+                            
                         </p>
+                        <div class="modal-form__error"  data-bind="1">Пожалуйста, заполните это поле!!</div>
                     </div>
                     <div class="modal-form__item">
                         <label for="phone" class="modal-form__label"  data-bind="2">Телефон*</label>
                         <p class="modal-form__input">
-                            <input type="tel" name="phone" id="phone"  data-bind="2" placeholder="+7 920 000 00 00" required>
+                            <input class="input__phone" type="tel" name="phone" id="phone"  data-bind="2" placeholder="+7 920 000 00 00" required>
+                            
                         </p>
+                        <div class="modal-form__error"  data-bind="2">Пожалуйста, заполните это поле!!</div>
                     </div>
                     <div class="modal-form__item textarea-block">
                         <label for="comment" class="modal-form__label"  data-bind="3">Комментарий</label>
                         <p class="modal-form__input">
-                            <textarea class="input" name="comment" id="comment"  data-bind="3"  >
-                            
-                            </textarea>
+                            <textarea class="input" name="comment" id="comment"  data-bind="3"></textarea>
                         </p>
                         <div id="comment_div"></div>
                     </div>
@@ -395,6 +397,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src=" https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/vendors/scrolloverflow.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.js"></script>
+    <script src="./js/inputmask.js"></script>
     <script src="./js/js.js"></script>
     <script src="./js/script.js"></script>
 </body>

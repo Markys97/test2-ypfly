@@ -72,7 +72,7 @@ html, body {
 
 .button-fix {
   position: fixed;
-  z-index: 1;
+  z-index: 101 !important;
   left: 4rem;
   bottom: 1rem;
   display: -webkit-box;
@@ -205,6 +205,10 @@ input:hover, textarea:hover {
   bottom: 0;
 }
 
+.big-word--mobile {
+  display: none;
+}
+
 .open-menu {
   left: 0 !important;
 }
@@ -260,7 +264,12 @@ input:hover, textarea:hover {
   background: #83caf2;
 }
 
-@media screen and (max-width: 1023px) {
+.logo__img {
+  width: 6.67rem;
+  height: 3.0rem;
+}
+
+@media screen and (max-width: 1024px) {
   html, body {
     font-size: calc(0.505vw + 0.905vh - 0.17rem);
   }
@@ -318,8 +327,9 @@ input:hover, textarea:hover {
   }
   .big-word--mobile {
     display: block !important;
-    position: relative;
+    position: absolute;
     text-align: center;
+    bottom: 0;
   }
   .background {
     min-height: 100vh;
@@ -378,7 +388,7 @@ input:hover, textarea:hover {
 }
 
 .menu__item:not(:first-child) {
-  margin-left: 20px;
+  margin-left: 2.0rem;
 }
 
 .menu__link--blue span {
@@ -420,7 +430,7 @@ input:hover, textarea:hover {
   width: 100%;
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   .header__burger {
     display: block;
   }
@@ -484,7 +494,7 @@ input:hover, textarea:hover {
     display: block;
   }
   .menu {
-    width: 30rem;
+    max-width: 93%;
     padding-left: 2.1rem;
   }
   .menu__close-btn {
@@ -520,6 +530,7 @@ input:hover, textarea:hover {
 .presentation {
   width: 100%;
   position: relative;
+  min-height: 53.9rem;
 }
 
 .presentation__container {
@@ -607,7 +618,7 @@ input:hover, textarea:hover {
   margin-top: -11rem;
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   .presentation__row {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
@@ -640,6 +651,7 @@ input:hover, textarea:hover {
 
 @media screen and (max-width: 667px) {
   .presentation {
+    min-height: 80.8rem;
     -webkit-box-shadow: none;
             box-shadow: none;
   }
@@ -698,11 +710,18 @@ input:hover, textarea:hover {
 
 .cible__container {
   padding-top: 6.3rem;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .cible__title {
   text-align: center;
   margin-bottom: 3.7rem;
+}
+
+.cible__container-row {
+  padding-left: 0.3rem;
+  padding-right: 0.3rem;
 }
 
 .cible__row {
@@ -752,6 +771,7 @@ input:hover, textarea:hover {
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
   border-radius: 26px;
+  width: 100%;
 }
 
 .item-cible__title {
@@ -818,12 +838,13 @@ input:hover, textarea:hover {
   margin-bottom: 1.1rem;
 }
 
-@media screen and (max-width: 1023px) {
-  .cible__container-row {
+@media screen and (max-width: 1024px) {
+  .cible__container {
     width: 100%;
+  }
+  .cible__container-row {
     overflow-x: auto;
     scrollbar-width: none;
-    margin: 0 -4rem;
     z-index: 1;
   }
   .cible__container-row::-webkit-scrollbar {
@@ -837,12 +858,14 @@ input:hover, textarea:hover {
     display: inline-flex;
     width: auto;
     max-width: none;
-    padding: 0 4rem;
     gap: 5.6rem;
   }
 }
 
 @media screen and (max-width: 667px) {
+  .cible {
+    min-height: 60.3rem;
+  }
   .cible__title {
     max-width: 35.4rem;
     margin: auto;
@@ -850,6 +873,9 @@ input:hover, textarea:hover {
   }
   .cible__container {
     padding-top: 5.4rem;
+  }
+  .cible__container-row {
+    width: 100%;
   }
   .cible__title {
     margin-bottom: 3.7rem;
@@ -939,7 +965,7 @@ input:hover, textarea:hover {
   display: none;
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   .expert__row {
     display: block;
   }
@@ -977,6 +1003,9 @@ input:hover, textarea:hover {
 }
 
 @media screen and (max-width: 667px) {
+  .expert {
+    min-height: 664px;
+  }
   .expert__container {
     padding-top: 5.3rem;
   }
@@ -1066,7 +1095,7 @@ input:hover, textarea:hover {
   margin-top: -10rem;
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   .forever__title {
     text-align: right;
   }
@@ -1104,6 +1133,9 @@ input:hover, textarea:hover {
 }
 
 @media screen and (max-width: 667px) {
+  .forever {
+    min-height: 67.5rem;
+  }
   .forever__container {
     padding-top: 5.3rem;
   }
@@ -1190,7 +1222,7 @@ input:hover, textarea:hover {
   margin-top: -19rem;
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   .road__row {
     display: block;
   }
@@ -1216,6 +1248,9 @@ input:hover, textarea:hover {
 }
 
 @media screen and (max-width: 667px) {
+  .road {
+    min-height: 65rem;
+  }
   .road__container {
     padding-top: 5.3rem;
   }
@@ -1313,7 +1348,7 @@ input:hover, textarea:hover {
   margin-top: -10rem;
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   .cooperation__row {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
@@ -1345,6 +1380,9 @@ input:hover, textarea:hover {
 }
 
 @media screen and (max-width: 667px) {
+  .cooperation {
+    min-height: 93.3rem;
+  }
   .cooperation__container {
     padding-top: 5.4rem;
   }
@@ -1431,7 +1469,7 @@ input:hover, textarea:hover {
   max-width: 44.8rem;
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   .case__container {
     padding-top: 21.8rem;
     background: unset;
@@ -1453,6 +1491,9 @@ input:hover, textarea:hover {
 }
 
 @media screen and (max-width: 667px) {
+  .case {
+    min-height: 76.7rem;
+  }
   .case__container {
     padding-top: 5.4rem;
   }
@@ -1479,7 +1520,7 @@ input:hover, textarea:hover {
   max-width: 48.9rem;
   height: 100vh;
   overflow-y: auto;
-  padding-top: 1.6rem;
+  padding-top: 2.4rem;
   background: #FFFFFF;
   -webkit-box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.15);
@@ -1507,7 +1548,8 @@ input:hover, textarea:hover {
 }
 
 .modal-form__close {
-  margin-left: 4rem;
+  margin-left: 2.4rem;
+  margin-bottom: 1.6rem;
 }
 
 .modal-form__title {
@@ -1524,7 +1566,7 @@ input:hover, textarea:hover {
 
 .modal-form__body {
   height: 100vh;
-  padding: 0 4rem;
+  padding: 0 2.4rem;
 }
 
 .modal-form__form {
@@ -1535,6 +1577,7 @@ input:hover, textarea:hover {
 .modal-form__item {
   max-width: 63.7rem;
   margin-bottom: 3rem;
+  position: relative;
 }
 
 .modal-form__label {
@@ -1568,7 +1611,7 @@ input:hover, textarea:hover {
   font-size: 1.4rem;
   line-height: 1.6rem;
   color: #777B7C;
-  padding-bottom: 1.2rem;
+  padding-bottom: .8rem;
 }
 
 .modal-form__input textarea {
@@ -1577,11 +1620,52 @@ input:hover, textarea:hover {
   overflow: hidden;
 }
 
+.modal-form__error {
+  position: absolute;
+  top: 0.5rem;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 2.1rem;
+  -webkit-box-shadow: 0 0   0.3rem red;
+          box-shadow: 0 0   0.3rem red;
+  background: #fff;
+  padding: 0 2rem;
+  font-family: 'Exo 2';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  color: red;
+  display: none;
+}
+
+.modal-form__error::after {
+  content: '';
+  display: block;
+  width: 2rem;
+  height: 1rem;
+  -webkit-box-shadow: 0 0   0.3rem red;
+          box-shadow: 0 0   0.3rem red;
+  position: absolute;
+  bottom: 0;
+  top: 1rem;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  left: 45%;
+  z-index: -1;
+}
+
 .modal-form__info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 1.8rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1589,8 +1673,8 @@ input:hover, textarea:hover {
 }
 
 .modal-form__info-icon {
-  width: 46px;
-  height: 34px;
+  width: 4.6rem;
+  height: 3.4rem;
 }
 
 .modal-form__info-icon svg {
@@ -1605,6 +1689,8 @@ input:hover, textarea:hover {
   font-size: 1.2rem;
   line-height: 1.4rem;
   color: #777B7C;
+  position: relative;
+  margin-left: -1.5rem;
 }
 
 .modal-form__submit {
@@ -1684,8 +1770,8 @@ input:hover, textarea:hover {
 }
 
 .icon-modal {
-  width: 40px;
-  height: 40px;
+  width: 4rem;
+  height: 4rem;
   position: relative !important;
   -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
@@ -1700,33 +1786,33 @@ input:hover, textarea:hover {
 .icon-modal:hover .icon-modal__row--small-top {
   -webkit-transform: rotate(4deg);
           transform: rotate(4deg);
-  left: 12px;
-  top: 3px;
+  left: 1.2rem;
+  top: .3rem;
 }
 
 .icon-modal:hover .icon-modal__row--small-bot {
   -webkit-transform: rotate(88deg);
           transform: rotate(88deg);
-  top: 11px;
-  right: -2px;
+  top: 1.1rem;
+  right: -.2rem;
 }
 
 .icon-modal__row {
   display: inline-block;
-  width: 40px;
-  height: 8px;
+  width: 4rem;
+  height: 0.8rem;
   background: #D6DDE0;
-  border-radius: 4px;
+  border-radius: 0.4rem;
   position: absolute;
 }
 
 .icon-modal__row--small {
-  width: 20px;
+  width: 2rem;
 }
 
 .icon-modal__row--small-top {
-  top: 8px;
-  left: 3px;
+  top: 0.8rem;
+  left: 0.3rem;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   -webkit-transition: all 600ms ease;
@@ -1734,8 +1820,8 @@ input:hover, textarea:hover {
 }
 
 .icon-modal__row--small-bot {
-  top: 22px;
-  right: 3px;
+  top: 2.2rem;
+  right: .3rem;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   -webkit-transition: all 600ms ease;
@@ -1745,7 +1831,7 @@ input:hover, textarea:hover {
 .icon-modal__row--long {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
-  top: 15px;
+  top: 1.5rem;
 }
 
 #comment_div {
@@ -1771,7 +1857,7 @@ input:hover, textarea:hover {
   border-bottom: 0.2rem solid #777B7C !important;
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   .modal-form {
     max-width: 63.7rem;
   }
@@ -1779,10 +1865,11 @@ input:hover, textarea:hover {
 
 @media screen and (max-width: 667px) {
   .modal-form {
-    max-width: 30rem;
+    max-width: 93%;
   }
   .modal-form__close {
     margin-bottom: 2.5rem;
+    margin-left: 1.6rem;
   }
   .modal-form__title {
     font-size: 2.4rem;
@@ -1792,16 +1879,16 @@ input:hover, textarea:hover {
   .modal-form__body {
     padding: 0 2rem;
   }
-  ::-webkit-input-placeholder, input, textarea, #comment_div {
+  ::-webkit-input-placeholder, input, textarea, #comment_div, .modal-form__error {
     font-size: 1.2rem;
   }
-  :-ms-input-placeholder, input, textarea, #comment_div {
+  :-ms-input-placeholder, input, textarea, #comment_div, .modal-form__error {
     font-size: 1.2rem;
   }
-  ::-ms-input-placeholder, input, textarea, #comment_div {
+  ::-ms-input-placeholder, input, textarea, #comment_div, .modal-form__error {
     font-size: 1.2rem;
   }
-  ::placeholder, input, textarea, #comment_div {
+  ::placeholder, input, textarea, #comment_div, .modal-form__error {
     font-size: 1.2rem;
   }
 }

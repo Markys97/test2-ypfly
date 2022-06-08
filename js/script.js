@@ -185,8 +185,35 @@ $(document).ready(function(){
         })
     }
 
-    // Изменение textarea
- 
+    // проверка required
+    $( ".modal-form__submit" ).click(function( event ) {
+        let errors=[]
+        event.preventDefault()
+      $('input').each((index,el)=>{
+          if($(el).val().length ===0){
+              errors.push(el)
+              $('.modal-form__error').each((errorIndex,error)=>{
+                  if($(error).data('bind')=== $(el).data('bind')){
+                     $(error).css({
+                         display:'block'
+                     })
+                    setTimeout(()=>{
+                        $(error).css({
+                            display:'none'
+                        })
+                    },4000)
+                  }
+              })
+          }
+          
+      })
+        if(errors.length===0){
+           alert('we don\'t have errors you can send form using ajax')
+        }
+      });
+
+      
+      
    
     setTimeout(
       function() 
@@ -395,7 +422,10 @@ $(document).ready(function(){
             })
        })
     })
- 
+    
+    if ($(".input__phone").length !== 0) {
+        Inputmask("+7 (999) 999-99-99").mask(".input__phone");
+     }
     
     if ($(window).width() < 1024) {
         

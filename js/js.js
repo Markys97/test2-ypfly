@@ -66,8 +66,8 @@ closeModalButton.addEventListener('click',e=>{
    
 })
 openModalButtons.forEach(openModalButton=>{
-    openModalButton.addEventListener('click',e=>{
-       e.stopPropagation()
+    openModalButton.addEventListener('click',function(e){
+        e.stopPropagation()
         modalBlock.classList.add('open-modal')
         // wrapperSection.classList.add('sombre')
         // textLinks.forEach(text=> text.classList.add('sombre-text'))
@@ -75,12 +75,30 @@ openModalButtons.forEach(openModalButton=>{
         // btnFixed.style.opacity=0.2
         // buttonPresentation.style.zIndex=-100
         bodyElt.classList.add('body');
-        let path= e.path;
-        console.log(path)
-        
        
+        console.log(this)
     })
     
 })
 
+window.addEventListener('click',function(e){
+    // console.log(e.target)
+    
+    let modaNodes= modalBlock.getElementsByTagName("*")
+    let menuNodes=menuBlock.getElementsByTagName("*")
+    let allNodeInModal= [...modaNodes]
+    let inMenuAllnodes=[...menuNodes]
+    let inBurgerAllNodes=[...burgerBtn.childNodes]
+   
+   
+    if(! allNodeInModal.includes(e.target) && ! inBurgerAllNodes.includes(e.target)){
+        modalBlock.classList.remove('open-modal')
+        bodyElt.classList.remove('body');
+    }
+
+    if( !inMenuAllnodes.includes(e.target) && ! inBurgerAllNodes.includes(e.target)){
+        menuBlock.classList.remove('open-menu');
+    }
+
+})
 

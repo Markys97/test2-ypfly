@@ -59,7 +59,7 @@
      }
 
 
-     @media screen and (max-width:1023px) {
+     @media screen and (max-width:1024px) {
          &__row{
              flex-direction: column-reverse;
              gap: 8.2rem;
@@ -90,6 +90,7 @@
      }
 
      @media screen and (max-width:667px) {
+        min-height: 93.3rem;
         &__container{
             padding-top: 5.4rem;
         }

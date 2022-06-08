@@ -3,7 +3,8 @@
     
     
     position: relative;
-   
+  
+   min-height: 53.9rem;
     &__container{
       min-height: 100%;
         padding-top:15.6rem ;
@@ -75,7 +76,7 @@
         margin-top: -11rem;
     }
 
-    @media screen and (max-width:1023px) {
+    @media screen and (max-width:1024px) {
         // background: unset;
         &__row{
             flex-direction: column-reverse;
@@ -107,10 +108,12 @@
         }
     }
     @media screen and (max-width:667px) {
+        min-height: 80.8rem;
         box-shadow: none;
         &__container{
         
               padding-top:8rem ;
+              
           }
         &__row{
             flex-direction: column-reverse;

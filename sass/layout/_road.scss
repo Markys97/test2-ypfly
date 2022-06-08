@@ -54,7 +54,7 @@
     }
 
 
-    @media screen and (max-width:1023px) {
+    @media screen and (max-width:1024px) {
         &__row{
             display: block;
         }
@@ -81,6 +81,7 @@
 
     }
     @media screen and (max-width:667px) {
+        min-height: 65rem;
         &__container{
             padding-top: 5.3rem;
         
