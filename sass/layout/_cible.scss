@@ -140,7 +140,8 @@
         width: 100%;
        }
         &__container-row {
-          
+          padding-left: 4rem;
+          padding-right: 4rem;
             overflow-x: auto;
            scrollbar-width: none;
            // touch-action: pan-x;
