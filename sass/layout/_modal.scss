@@ -218,37 +218,21 @@ height: 2.4rem;
 position: relative!important;
 transition: all 300ms ease!important;
 cursor: pointer;
+border: 1px solid red;
 
-&--left{
-    &:hover{
-        transform: rotate(45deg);
-        .icon-modal__row--small{
-            &-top{
-                transform: rotate(4deg);
-                left: 0rem!important;
-                top: 2.5rem!important;
-            }
-            &-bot{
-                transform: rotate(88deg);
-                left: -0.4rem!important;
-                top: 2rem!important;
-                right: unset!important;
-            }
-        }
-    }
-}
+
 &:hover{
     transform: rotate(45deg);
     .icon-modal__row--small{
         &-top{
             transform: rotate(4deg);
-            left: 1.2rem;
-            top: .3rem;
+            left: 0.9rem;
+            top: -.1rem;
         }
         &-bot{
             transform: rotate(88deg);
-            top: 1rem;
-            right: -.6rem;
+            top: .5rem;
+            right: -.4rem;
         }
     }
 }
@@ -261,16 +245,16 @@ cursor: pointer;
     position: absolute;
    
     &--small{
-        width: 1.2845rem;
+        width: 1.4rem;
       &-top{
-        top: 1rem;
-        left: 0.2rem;
+        top: .6rem;
+        left: .1rem;
         transform: rotate(45deg);
         transition: all 600ms ease;
       }
       &-bot{
-        top: 1.9rem;
-        right: .11rem;
+        top: 1.4rem;
+        right: 0;
         transform: rotate(45deg);
         transition: all 600ms ease;
       }
@@ -278,7 +262,8 @@ cursor: pointer;
     }
     &--long{
         transform: rotate(-45deg);
-        top: 1.5rem;
+        top: 1rem;
+        left:-.2rem;
 
        
        

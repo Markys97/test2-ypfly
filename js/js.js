@@ -1,4 +1,4 @@
-let burgerBtn= document.querySelector('.burger');
+let burgerBtn= document.querySelector('.header__burger');
 let menuBlock= document.querySelector('.menu');
 let closeMenuBtn= document.querySelector('.menu__close-btn')
 let menuLinks= document.querySelectorAll('.menu__link')

@@ -520,7 +520,7 @@ $(document).ready(function(){
             touchSensitivity: 15,
             fitToSection:false,
             autoScrolling:false,
-            normalScrollElements: '.modal-form, .cible__container-row',
+            normalScrollElements: '.modal-form',
             //Дизайн
             // paddingTop:'0px',
             scrollHorizontally: true,
@@ -542,6 +542,16 @@ $(document).ready(function(){
                     
                    
                 }
+                 
+                if(destination===1){
+                   $('.header').attr("id","headerSelector")
+                }else{
+                    $('.header').removeAttr("id")
+                }
+
+               
+
+
                 changeColorHeader(destination)
                   // handle button fixed on screen
                handlerButtonFixForDesktop(destination)
@@ -574,6 +584,7 @@ $(document).ready(function(){
                     background: sectionParams[destination-1][0],
                     transition: "all 1s ease-out",
                 });
+              
                 $('header').css({
                     background: sectionParams[destination-1][1],
                     transition: "all 1s ease-out",

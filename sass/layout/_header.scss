@@ -10,6 +10,7 @@
     }
     &__burger{
         display: none;
+        
     }
    
 }
@@ -17,7 +18,7 @@
 .menu{
     &__close-btn{
         display: none;
-        cursor: pointer;
+     
         img{
             padding: 1rem;
         }
@@ -85,7 +86,65 @@
     }
 }
 
+.icon-menu{
+    width: 3.4rem;
+    height: 3.4rem;
+    cursor: pointer;
+   border: 1px solid red;
+    position: relative;
+    transition: all 300ms ease!important;
+    &:hover{
+        transform: rotate(45deg);
+        .icon-menu__row{
+            &--small{
+                &-top{
+                    left: -.2rem;
+                    top: 1.5rem;
+                    transform: rotate(87deg);
+                }
+                &-bot{
+                    right: 1rem;
+                    top: 2.5rem;
+                    transform: rotate(1deg);
+                }
+            }
+        }
+    }
+    &__row{
+        display: block;
+        background: #D6DDE0;
+        border-radius: .4rem;
+        width: 100%;
+        height: .794rem;
+        position: absolute;
+        &--small{
+            width: 50%;
+            transform: rotate(45deg);
+            &-top{
+                left: .2rem;
+                top: .8rem;
+                 transition: all 600ms ease;
+            }
+            &-bot{
+                right: 0.1rem;
+                top: 2.2rem;
+                 transition: all 600ms ease;
+            }
+          
+        }
+        &--long{
+            transform: rotate(-45deg);
+            top: 1.5rem;
+        }
+        
 
+    }
+}
+
+
+#headerSelector{
+    background: transparent!important;
+}
 @media screen and (max-width:1024px) {
     .header{
        
