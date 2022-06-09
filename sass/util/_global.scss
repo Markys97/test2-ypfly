@@ -106,7 +106,7 @@ input,textarea{
 .burger{
     width: 33px;
     height: 18.21px;
-    cursor: pointer;
+  
     &__row{
         display: block;
         width: 100%;
@@ -274,6 +274,9 @@ input,textarea{
         font-size: calc(0.505vw + 0.905vh - 0.17rem);
 
 
+    }
+    .navbar-mobile{
+        display: block;
     }
     ._container{
         padding: 0 4rem;

@@ -120,7 +120,6 @@ input:hover, textarea:hover {
 .burger {
   width: 33px;
   height: 18.21px;
-  cursor: pointer;
 }
 
 .burger__row {
@@ -273,6 +272,9 @@ input:hover, textarea:hover {
   html, body {
     font-size: calc(0.505vw + 0.905vh - 0.17rem);
   }
+  .navbar-mobile {
+    display: block;
+  }
   ._container {
     padding: 0 4rem;
   }
@@ -347,8 +349,10 @@ input:hover, textarea:hover {
 
 .header {
   position: fixed;
-  z-index: 999;
+  z-index: 500;
   width: 100%;
+  -webkit-transition: all 3ms ease-in;
+  transition: all 3ms ease-in;
 }
 
 .header__container {
@@ -366,6 +370,9 @@ input:hover, textarea:hover {
 
 .header__burger {
   display: none;
+  border: 1px solid red;
+  padding: .1rem;
+  cursor: pointer;
 }
 
 .menu__close-btn {
@@ -440,8 +447,8 @@ input:hover, textarea:hover {
 }
 
 .icon-menu:hover {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 .icon-menu:hover .icon-menu__row--small-top {
@@ -469,28 +476,25 @@ input:hover, textarea:hover {
 
 .icon-menu__row--small {
   width: 50%;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 .icon-menu__row--small-top {
-  left: .2rem;
-  top: .8rem;
-  -webkit-transition: all 600ms ease;
-  transition: all 600ms ease;
+  left: 1.3rem;
+  top: .5rem;
 }
 
 .icon-menu__row--small-bot {
-  right: 0.1rem;
-  top: 2.2rem;
-  -webkit-transition: all 600ms ease;
-  transition: all 600ms ease;
+  left: 0;
+  top: 1.9rem;
 }
 
 .icon-menu__row--long {
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-  top: 1.5rem;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: 1.2rem;
+  left: -0.1rem;
 }
 
 #headerSelector {
@@ -503,7 +507,7 @@ input:hover, textarea:hover {
   }
   .menu {
     position: fixed;
-    z-index: 1000 !important;
+    z-index: 10000 !important;
     width: 62.9rem;
     min-height: 100vh;
     top: 0;
@@ -994,6 +998,7 @@ input:hover, textarea:hover {
   font-weight: 800;
   position: relative;
   display: inline-block;
+  color: #FFFFFF;
 }
 
 .expert__text-important::after {
@@ -1963,5 +1968,113 @@ input:hover, textarea:hover {
   ::placeholder, input, textarea, #comment_div, .modal-form__error {
     font-size: 1.2rem;
   }
+}
+
+.close {
+  display: inline-block;
+  position: relative;
+  width: 2.2rem;
+  height: 2.2rem;
+  -webkit-transition: linear transform 0.35s;
+  transition: linear transform 0.35s;
+}
+
+.close:hover {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.close:hover .short_b_cl.short_top {
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+  left: 6px;
+  top: -27px;
+  background: #777B7C;
+}
+
+.close:hover .long_b_cl {
+  background: #777B7C;
+}
+
+.close:hover .short_b_cl.short_bot {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  bottom: 2px;
+  right: -29px;
+  background: #777B7C;
+}
+
+.close-left:hover .short_b_cl.short_top {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  left: -24px;
+  top: 3px;
+}
+
+.close-left:hover .short_b_cl.short_bot {
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+  bottom: -27px;
+  right: -2px;
+}
+
+.close-left .short_bot {
+  bottom: -16px;
+  right: -18px;
+}
+
+.close-left .short_b_cl.short_top {
+  top: -15px;
+  left: -15px;
+}
+
+.short_b_cl {
+  width: 20px;
+  height: 6px;
+  top: -5%;
+  left: -5%;
+  right: -5%;
+  bottom: -5%;
+  margin: auto;
+  position: absolute;
+  background: #D6DDE0;
+  border-radius: 4px;
+  z-index: 1;
+  -webkit-transition: linear all 0.15s;
+  transition: linear all 0.15s;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.short_b_cl.short_top {
+  top: -15px;
+  left: -15px;
+}
+
+.short_b_cl.short_bot {
+  bottom: -16px;
+  right: -18px;
+}
+
+.long_b_cl {
+  width: 40px;
+  position: absolute;
+  top: -5%;
+  left: -5%;
+  right: -5%;
+  bottom: -5%;
+  margin: auto;
+  left: 0;
+  height: 6px;
+  background: #D6DDE0;
+  border-radius: 4px;
+  -webkit-transition: linear all 0.15s;
+  transition: linear all 0.15s;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.hide {
+  z-index: -1 !important;
 }
 /*# sourceMappingURL=main.css.map */

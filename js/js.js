@@ -12,15 +12,24 @@ let phoneNumberText= document.querySelector('.tel__link')
 let btnFixed= document.querySelector('.button-fix')
 let buttonPresentation=document.querySelector('.presentation__btn')
 let bodyElt= document.querySelector('body');
+let logo= document.querySelector('.logo');
 console.log(closeModalButton)
 // open menu on mobile screen
 burgerBtn.addEventListener('click',e=>{
+
+    e.stopImmediatePropagation()
     menuBlock.classList.add('open-menu');
+    // bodyElt.classList.add('body');
+    // logo.classList.add('hide')
+    console.log(e.target)
+  
 })
 
 // close menu on mobile screen
 closeMenuBtn.addEventListener('click',e=>{
     menuBlock.classList.remove('open-menu');
+    bodyElt.classList.remove('body');
+    logo.classList.remove('hide')
 })
 
 // close menu function
