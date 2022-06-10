@@ -4,6 +4,7 @@ html,body{
     
 }
 .body{
+    
     &::after{
         content: '';
         display: block;
@@ -13,7 +14,7 @@ html,body{
         bottom: 0;
         right: 0;
         background: #000;
-        z-index: 1000!important;
+       z-index: 1000;
         opacity: .5;
     }
 }
@@ -95,7 +96,7 @@ input,textarea{
         font-weight: 700;
         font-size: 1.6rem;
         line-height: 1.9rem;
-        
+       
         color: #FFFFFF;
         &--blue{
             color: #53CBF9!important;
@@ -258,7 +259,9 @@ input,textarea{
 }
 
 
-
+.hide{
+    opacity: 0.1!important;
+}
 
 
 

@@ -1,6 +1,6 @@
 .header{
     position: fixed;
-    z-index: 500;
+    z-index: 1100;
     width: 100%;
     transition: all 3ms ease-in;
     &__container{
@@ -11,7 +11,6 @@
     }
     &__burger{
         display: none;
-        border: 1px solid red;
         padding: .1rem;
         cursor: pointer;
         
@@ -21,17 +20,11 @@
 }
 
 .menu{
+   
     &__close-btn{
         display: none;
-     
-        img{
-            padding: 1rem;
-        }
-       svg:hover{
-         rect{
-            fill:#777B7C;
-        }
-       }
+      
+        
     }
     &__list{
         display: flex;

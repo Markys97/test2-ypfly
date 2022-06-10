@@ -13,30 +13,45 @@ let btnFixed= document.querySelector('.button-fix')
 let buttonPresentation=document.querySelector('.presentation__btn')
 let bodyElt= document.querySelector('body');
 let logo= document.querySelector('.logo');
-console.log(closeModalButton)
+
 // open menu on mobile screen
-burgerBtn.addEventListener('click',e=>{
+burgerBtn.addEventListener('click',function(e){
 
     e.stopImmediatePropagation()
     menuBlock.classList.add('open-menu');
-    // bodyElt.classList.add('body');
-    // logo.classList.add('hide')
-    console.log(e.target)
+    bodyElt.classList.add('body');
+    logo.classList.add('hide')
+    phoneNumberText.classList.add('hide')
+    logo.ariaDisabled=true
+    this.classList.add('hide')
+
   
 })
 
-// close menu on mobile screen
-closeMenuBtn.addEventListener('click',e=>{
+function closeMenu(){
     menuBlock.classList.remove('open-menu');
     bodyElt.classList.remove('body');
     logo.classList.remove('hide')
+    phoneNumberText.classList.remove('hide')
+    logo.ariaDisabled=false
+    burgerBtn.classList.remove('hide')
+   
+}
+
+
+// close menu on mobile screen
+closeMenuBtn.addEventListener('click',function(e){
+    closeMenu()
+
+  
 })
+
 
 // close menu function
 const setCloseMenu=()=>{
     if(window.screen.width>668 || window.screen.width >1024){
         if(menuBlock.classList.contains('open-menu')){
-            menuBlock.classList.remove('open-menu');
+            closeMenu()
         }
     }
 }
@@ -44,7 +59,7 @@ const setCloseMenu=()=>{
 // set active menu link
 menuLinks.forEach((link,index,links)=>{
     link.addEventListener('click',e=>{
-        menuBlock.classList.remove('open-menu');
+        closeMenu()
         if(link.classList.contains('menu__link--active')){
             return true
         }else{
@@ -63,8 +78,9 @@ setCloseMenu()
 // handler modal form
 
 closeModalButton.addEventListener('click',e=>{
+    e.stopImmediatePropagation()
     modalBlock.classList.remove('open-modal')
-  
+    header.style.zIndex=10000
     // textLinks.forEach(text=> text.classList.remove('sombre-text'))
     // phoneNumberText.classList.remove('sombre-text')
     // btnFixed.style.opacity=1
@@ -75,9 +91,11 @@ closeModalButton.addEventListener('click',e=>{
    
 })
 openModalButtons.forEach(openModalButton=>{
+   
     openModalButton.addEventListener('click',function(e){
-        e.stopPropagation()
+        e.stopImmediatePropagation()
         modalBlock.classList.add('open-modal')
+        header.style.zIndex=1
         // wrapperSection.classList.add('sombre')
         // textLinks.forEach(text=> text.classList.add('sombre-text'))
         // phoneNumberText.classList.add('sombre-text')
@@ -90,24 +108,35 @@ openModalButtons.forEach(openModalButton=>{
     
 })
 
-window.addEventListener('click',function(e){
-    // console.log(e.target)
+window.addEventListener('click',(e)=>{
     
-    let modaNodes= modalBlock.getElementsByTagName("*")
-    let menuNodes=menuBlock.getElementsByTagName("*")
-    let allNodeInModal= [...modaNodes]
-    let inMenuAllnodes=[...menuNodes]
+    e.stopImmediatePropagation()
+    let allNodeInModal= [...modalBlock.getElementsByTagName("*")]
     let inBurgerAllNodes=[...burgerBtn.childNodes]
+    let allNodeInMenu=[...menuBlock.getElementsByTagName("*")]
    
    
-    if(! allNodeInModal.includes(e.target) && ! inBurgerAllNodes.includes(e.target)){
-        modalBlock.classList.remove('open-modal')
-        bodyElt.classList.remove('body');
+ 
+
+    if(modalBlock.classList.contains('open-modal')){
+        if(! allNodeInModal.includes(e.target) && ! inBurgerAllNodes.includes(e.target)){
+                modalBlock.classList.remove('open-modal')
+                bodyElt.classList.remove('body');
+                header.style.zIndex=10000
+        }
     }
 
-    if( !inMenuAllnodes.includes(e.target) && ! inBurgerAllNodes.includes(e.target)){
-        menuBlock.classList.remove('open-menu');
+    if(menuBlock.classList.contains('open-menu')){
+      if(e.target !== menuBlock && !allNodeInMenu.includes(e.target)){
+         closeMenu()
+      }else{
+        console.log('dedans')
+        header.style.zIndex=10000
+      }
     }
+
+
+    
 
 })
 
