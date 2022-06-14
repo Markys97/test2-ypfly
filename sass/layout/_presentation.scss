@@ -97,6 +97,10 @@
             margin-bottom: 6rem;
             text-align: center;
         }
+        &__img{
+            width: 71.9rem;
+            height: 48.8rem;
+        }
         &__btn{
             margin: auto;
         }
@@ -124,8 +128,8 @@
             
         }
         &__img{
-            width: 27.9rem;
-            height: 21.8rem;
+            width: 40rem;
+            height: 28.8rem;
         }
         &__title{
             margin-bottom: 2.4rem;
@@ -154,13 +158,18 @@
             max-width:100% ;
         }
 
-        &__body{
-            max-width: 100%;
+        &__text{
+              margin: 0 0 8.2rem;
+              width: 100%;
             
         }
          &__title{
             font-size: 2rem;
             text-align: center;
+        }
+        &__img{
+            width: 39rem;
+            height: 30.2rem;
         }
       
     }

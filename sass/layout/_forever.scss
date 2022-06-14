@@ -127,4 +127,22 @@
         }
 
     }
+    @media screen and (max-width:320px) {
+     
+        &__img{
+
+            width: 23.2rem;
+            height: 26.7rem;
+            margin: auto;
+        }
+        &__big-word{
+            position: relative;
+            margin-top: 10.8rem;
+        }
+        &__texts{
+            margin: 0 -3.1rem 0;
+            padding: 10 1.8rem 0;
+        }
+
+    }
 }

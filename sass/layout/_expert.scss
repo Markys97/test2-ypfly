@@ -145,6 +145,28 @@
          &__img{
             width: 22.501rem;
             height: 24.413rem;
+           
+            
+         }
+     }
+     @media screen and (max-width:320px) {
+       
+       min-height: 66.4rem;
+       
+         &__body{
+            max-width: 52.1rem;
+            // border:1px solid white;
+            margin-bottom: 4.9rem;
+        }
+        &__text{
+            
+            margin-bottom: 4.9rem;
+            
+         }
+        
+         &__img{
+            width: 27.5rem;
+            height: 29.8rem;
             
          }
      }

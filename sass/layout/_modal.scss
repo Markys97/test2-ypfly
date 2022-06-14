@@ -96,6 +96,7 @@
            line-height: 1.6rem;
            color: #777B7C;
            padding-bottom: .8rem;
+           cursor: auto;
        }
        textarea{
         -webkit-appearance: none;
@@ -288,6 +289,7 @@ border: 1px solid red;
 .label-active{
     color: #777B7C;
 }
+
 .input-active{
     border-bottom:0.2rem solid #777B7C!important;
 }

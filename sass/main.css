@@ -705,6 +705,10 @@ input:hover, textarea:hover {
     margin-bottom: 6rem;
     text-align: center;
   }
+  .presentation__img {
+    width: 71.9rem;
+    height: 48.8rem;
+  }
   .presentation__btn {
     margin: auto;
   }
@@ -735,8 +739,8 @@ input:hover, textarea:hover {
     max-width: 44.4rem;
   }
   .presentation__img {
-    width: 27.9rem;
-    height: 21.8rem;
+    width: 40rem;
+    height: 28.8rem;
   }
   .presentation__title {
     margin-bottom: 2.4rem;
@@ -761,12 +765,17 @@ input:hover, textarea:hover {
   .presentation__content {
     max-width: 100%;
   }
-  .presentation__body {
-    max-width: 100%;
+  .presentation__text {
+    margin: 0 0 8.2rem;
+    width: 100%;
   }
   .presentation__title {
     font-size: 2rem;
     text-align: center;
+  }
+  .presentation__img {
+    width: 39rem;
+    height: 30.2rem;
   }
 }
 
@@ -800,8 +809,9 @@ input:hover, textarea:hover {
 
 .item-cible {
   width: 23rem;
-  height: 33.5rem;
+  height: 36.5rem;
   background-color: transparent;
+  padding: 1.5rem 0;
   -webkit-perspective: 1000px;
           perspective: 1000px;
   cursor: pointer;
@@ -856,7 +866,7 @@ input:hover, textarea:hover {
   width: 16.355rem;
   height: 19.701rem;
   position: absolute;
-  right: 0;
+  right: -2px;
   bottom: 2.1rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -884,7 +894,7 @@ input:hover, textarea:hover {
 .item-cible__body {
   width: 100%;
   height: 100%;
-  padding: 1.7rem 1.6rem;
+  padding: 1.5rem 1.6rem;
 }
 
 .item-cible__container-row {
@@ -948,6 +958,16 @@ input:hover, textarea:hover {
   .cible__title {
     margin-bottom: 3.7rem;
   }
+  .item-cible:hover .item-cible__container {
+    -webkit-transform: unset;
+            transform: unset;
+    pointer-events: none;
+  }
+}
+
+.hover-effect {
+  -webkit-transform: rotateY(180deg) !important;
+          transform: rotateY(180deg) !important;
 }
 
 .expert {
@@ -1094,6 +1114,23 @@ input:hover, textarea:hover {
   }
 }
 
+@media screen and (max-width: 320px) {
+  .expert {
+    min-height: 66.4rem;
+  }
+  .expert__body {
+    max-width: 52.1rem;
+    margin-bottom: 4.9rem;
+  }
+  .expert__text {
+    margin-bottom: 4.9rem;
+  }
+  .expert__img {
+    width: 27.5rem;
+    height: 29.8rem;
+  }
+}
+
 .forever {
   width: 100%;
 }
@@ -1231,6 +1268,22 @@ input:hover, textarea:hover {
   }
 }
 
+@media screen and (max-width: 320px) {
+  .forever__img {
+    width: 23.2rem;
+    height: 26.7rem;
+    margin: auto;
+  }
+  .forever__big-word {
+    position: relative;
+    margin-top: 10.8rem;
+  }
+  .forever__texts {
+    margin: 0 -3.1rem 0;
+    padding: 10 1.8rem 0;
+  }
+}
+
 .road {
   width: 100%;
 }
@@ -1347,6 +1400,17 @@ input:hover, textarea:hover {
   }
   .road__container-big-word {
     max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .road__img {
+    width: 32rem;
+    height: 27.7rem;
+  }
+  .road__text {
+    margin: 0 -.9rem 1.6rem;
+    padding: 0 .9rem 1.6rem;
   }
 }
 
@@ -1479,6 +1543,17 @@ input:hover, textarea:hover {
   }
 }
 
+@media screen and (max-width: 667px) {
+  .cooperation__img {
+    width: 30.4rem;
+    height: 32.8rem;
+    margin-left: -3rem;
+  }
+  .cooperation__img img {
+    margin-top: -7rem;
+  }
+}
+
 .case {
   width: 100%;
 }
@@ -1563,7 +1638,7 @@ input:hover, textarea:hover {
 
 @media screen and (max-width: 667px) {
   .case {
-    min-height: 76.7rem;
+    min-height: 50.7rem;
   }
   .case__container {
     padding-top: 5.4rem;
@@ -1682,6 +1757,7 @@ input:hover, textarea:hover {
   line-height: 1.6rem;
   color: #777B7C;
   padding-bottom: .8rem;
+  cursor: auto;
 }
 
 .modal-form__input textarea {

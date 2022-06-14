@@ -13,6 +13,7 @@ let btnFixed= document.querySelector('.button-fix')
 let buttonPresentation=document.querySelector('.presentation__btn')
 let bodyElt= document.querySelector('body');
 let logo= document.querySelector('.logo');
+let containerCible =document.querySelector('.cible__container')
 
 // open menu on mobile screen
 burgerBtn.addEventListener('click',function(e){
@@ -139,4 +140,35 @@ window.addEventListener('click',(e)=>{
     
 
 })
+// handler input name
+let nameInput= document.querySelector('input[name=name]');
+let initValueInputName;
 
+nameInput.addEventListener('mouseenter',e=>{
+    initValueInputName=e.target.placeholder
+    e.target.placeholder=''
+})
+nameInput.addEventListener('mouseleave',e=>{
+    e.target.placeholder=initValueInputName
+})
+
+// handler click on cible item
+
+let cibleItems= document.querySelectorAll('.item-cible');
+
+cibleItems.forEach((cibleItem,index,list)=>{
+    cibleItem.addEventListener('click',function(e){
+     if(window.screen.width <667){
+        let cibleContainer=this.querySelector('.item-cible__container')
+        list.forEach(el=>{
+            let elContainer= el.querySelector('.item-cible__container')
+            if(elContainer.classList.contains('hover-effect') && cibleContainer != elContainer){
+                elContainer.classList.toggle('hover-effect')
+            }
+        })
+        cibleContainer.classList.toggle('hover-effect')
+     }
+       
+       
+    })
+})
